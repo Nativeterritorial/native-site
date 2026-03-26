@@ -2,54 +2,320 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<title>Georreferenciamento em Veranópolis | NATIVE</title>
-<meta name="description" content="Georreferenciamento de imóveis rurais em Veranópolis. INCRA, SIGEF e regularização com responsabilidade técnica." />
+  <title>Georreferenciamento em Veranópolis | NATIVE</title>
+  <meta name="description" content="Georreferenciamento de imóveis rurais em Veranópolis. INCRA, SIGEF e regularização com responsabilidade técnica pela NATIVE." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html" />
 
-<style>
-body {margin:0;font-family:Arial;background:#333;color:#f1f5ff;}
-.container {max-width:900px;margin:auto;padding:40px 20px;}
-.card {background:#1f1f1f;padding:20px;border-radius:10px;margin-top:20px;}
-h1 {font-size:32px;}
-p {color:#c7cad1;line-height:1.6;}
-.button {display:inline-block;margin-top:20px;padding:14px 22px;background:#25D366;color:white;text-decoration:none;border-radius:8px;}
-</style>
+  <style>
+    :root{
+      --bg:#333333;
+      --card:#1f1f1f;
+      --muted:#c7cad1;
+      --text:#f1f5ff;
+      --accent:#7c3aed;
+      --line:#3f3f3f;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:10px 0;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      font-weight:800;
+    }
+
+    .logoMark{
+      width:120px;
+      height:120px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      flex-shrink:0;
+      background:transparent;
+    }
+
+    .logoMark img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:4px;
+    }
+
+    .brandTitle{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+
+    .brandTitle strong{
+      font-size:18px;
+    }
+
+    .badge{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-top:8px;
+      width:max-content;
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    nav a:hover{
+      color:var(--text);
+    }
+
+    .hero{
+      padding:34px 0 18px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:14px;
+    }
+
+    h1{
+      font-size:44px;
+      line-height:1.05;
+      margin:0 0 14px;
+    }
+
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.7;
+      margin:0 0 20px;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:transparent;
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent),#4f46e5);
+      border:0;
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    .section{
+      padding:22px 0;
+    }
+
+    h2{
+      font-size:26px;
+      margin:0 0 12px;
+    }
+
+    p, li{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    ul{
+      margin:0;
+      padding-left:20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    footer{
+      padding:30px 0;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+
+    @media (max-width: 900px){
+      .hero,.grid{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .logoMark{width:92px;height:92px}
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="logoMark">
+          <img src="logo.png" alt="Logo NATIVE"
+               onerror="this.style.display='none'; this.parentElement.textContent='N'; this.parentElement.style.fontWeight='900';" />
+        </div>
 
-<div class="container">
+        <div class="brandTitle">
+          <strong>NATIVE Inteligência Territorial e Ambiental</strong>
+          <span class="badge">Topografia • Georreferenciamento • Ambiental</span>
+        </div>
+      </div>
 
-<h1>Georreferenciamento em Veranópolis</h1>
-<p>Serviço técnico de georreferenciamento conforme exigências do INCRA e SIGEF, garantindo precisão e segurança jurídica.</p>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="topografia-veranopolis.html">Topografia</a>
+        <a href="georreferenciamento-veranopolis.html">Georreferenciamento</a>
+        <a href="licenciamento-ambiental-veranopolis.html">Licenciamento</a>
+      </nav>
+    </header>
 
-<div class="card">
-<h2>Serviços realizados</h2>
-<ul>
-<li>Georreferenciamento INCRA</li>
-<li>Envio e acompanhamento no SIGEF</li>
-<li>Levantamento de campo</li>
-<li>Regularização de imóveis rurais</li>
-</ul>
-</div>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="pill">Georreferenciamento • Veranópolis e região</span>
+          <h1>Georreferenciamento em Veranópolis com precisão técnica e segurança jurídica.</h1>
+          <p class="sub">
+            A NATIVE atua com georreferenciamento de imóveis rurais, processos ligados ao INCRA e SIGEF,
+            levantamento de campo e organização técnica para regularização com clareza e responsabilidade.
+          </p>
 
-<div class="card">
-<h2>Atendimento</h2>
-<p>Atuação em Veranópolis e toda a região Sul e Sudeste.</p>
-</div>
+          <div class="ctaRow">
+            <a class="btn primary" href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Georreferenciamento.%20Cidade:%20____%20%7C%20Demanda:%20____" target="_blank" rel="noopener">
+              💬 Solicitar orçamento
+            </a>
+            <a class="btn" href="index.html">← Voltar ao site</a>
+          </div>
+        </div>
 
-<div class="card">
-<h2>Por que escolher a NATIVE?</h2>
-<p>Responsabilidade técnica, clareza e foco na segurança do processo.</p>
-</div>
+        <div class="card">
+          <h2 style="font-size:22px;">Atendimento</h2>
+          <p>
+            Base em <strong style="color:#f1f5ff;">Veranópolis - RS</strong> com atuação em
+            <strong style="color:#f1f5ff;">RS, SC, PR e SP</strong>.
+          </p>
+          <p>
+            Suporte técnico para demandas de georreferenciamento com foco em segurança, regularização
+            e organização do processo.
+          </p>
+        </div>
+      </section>
 
-<a href="https://wa.me/5554997104400" class="button">
-Solicitar orçamento
-</a>
+      <section class="section">
+        <div class="grid">
+          <div class="card">
+            <h2>Serviços realizados</h2>
+            <ul>
+              <li>Georreferenciamento de imóveis rurais</li>
+              <li>Processos conforme INCRA</li>
+              <li>Envio e acompanhamento no SIGEF</li>
+              <li>Levantamento de campo com precisão</li>
+              <li>Assessoria técnica completa</li>
+            </ul>
+          </div>
 
-</div>
+          <div class="card">
+            <h2>Quando faz sentido buscar esse serviço</h2>
+            <ul>
+              <li>Regularização de imóvel rural</li>
+              <li>Desmembramento ou venda da área</li>
+              <li>Exigência documental em cartório ou processo</li>
+              <li>Necessidade de mais segurança jurídica</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="card">
+          <h2>Por que escolher a NATIVE?</h2>
+          <p>
+            Trabalhamos com responsabilidade técnica, clareza no processo e leitura prática da demanda,
+            para que o cliente saiba exatamente o que está sendo feito e qual é o próximo passo.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>Outros serviços da NATIVE</h2>
+          <p>
+            <a href="topografia-veranopolis.html">Topografia em Veranópolis</a><br>
+            <a href="licenciamento-ambiental-veranopolis.html">Licenciamento Ambiental em Veranópolis</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> NATIVE Inteligência Territorial e Ambiental • Todos os direitos reservados
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
