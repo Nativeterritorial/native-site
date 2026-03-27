@@ -1,321 +1,898 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Licenciamento Ambiental em Veranópolis | NATIVE</title>
-  <meta name="description" content="Licenciamento ambiental em Veranópolis e região. Regularização, diagnóstico ambiental, CAR e assessoria técnica completa com a NATIVE." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Licenciamento Ambiental em Veranópolis | NATIVE Inteligência Territorial</title>
+  <meta name="description" content="Licenciamento ambiental em Veranópolis e região. Regularização, diagnóstico ambiental, CAR e assessoria técnica completa com a NATIVE.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Licenciamento Ambiental em Veranópolis | NATIVE">
+  <meta property="og:description" content="Regularização ambiental, diagnóstico, CAR e assessoria técnica em Veranópolis e região com a NATIVE.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NATIVE Inteligência Territorial e Ambiental",
+    "description": "Licenciamento ambiental, regularização de áreas e assessoria técnica em Veranópolis e região.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Veranópolis",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["RS", "SC", "PR", "SP"],
+    "telephone": "+5554997104400",
+    "url": "https://nativeterritorial.com.br"
+  }
+  </script>
   <style>
-    :root{
-      --bg:#333333;
-      --card:#1f1f1f;
-      --muted:#c7cad1;
-      --text:#f1f5ff;
-      --accent:#7c3aed;
-      --line:#3f3f3f;
-      --radius:18px;
+    :root {
+      --bg: #1a1a2e;
+      --bg-light: #16213e;
+      --card: #1c1c36;
+      --card-hover: #232347;
+      --muted: #a8b2d1;
+      --text: #e6f1ff;
+      --accent: #7c3aed;
+      --accent-light: #a78bfa;
+      --accent-glow: rgba(124, 58, 237, 0.15);
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.12);
+      --line: #2a2a4a;
+      --radius: 16px;
+      --radius-sm: 10px;
     }
 
-    *{box-sizing:border-box}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px;
+    /* ===== HEADER ===== */
+    header {
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
     }
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:10px 0;
-      flex-wrap:wrap;
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      font-weight:800;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    .logoMark{
-      width:120px;
-      height:120px;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-      flex-shrink:0;
-      background:transparent;
+    .logoMark {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .logoMark img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      padding:4px;
+    .logoMark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .brandTitle{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name { font-weight: 800; font-size: 1rem; letter-spacing: -0.02em; }
+    .brand-tag { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+
+    nav { display: flex; gap: 6px; flex-wrap: wrap; }
+    nav a {
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      color: var(--muted);
+    }
+    nav a:hover, nav a.active {
+      background: var(--accent-glow);
+      color: var(--accent-light);
     }
 
-    .brandTitle strong{
-      font-size:18px;
+    /* ===== HERO ===== */
+    .hero {
+      padding: 72px 0 56px;
+      position: relative;
     }
 
-    .badge{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;
-      border-radius:999px;
-      margin-top:8px;
-      width:max-content;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: start;
     }
 
-    nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      color: var(--accent-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
     }
 
-    nav a{
-      color:var(--muted);
-      font-size:14px;
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
     }
 
-    nav a:hover{
-      color:var(--text);
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
 
-    .hero{
-      padding:34px 0 18px;
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:22px;
-      align-items:start;
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
     }
 
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
-      font-size:12px;
-      margin-bottom:14px;
+    .hero h1 span {
+      color: var(--accent-light);
     }
 
-    h1{
-      font-size:44px;
-      line-height:1.05;
-      margin:0 0 14px;
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 28px;
     }
 
-    .sub{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.7;
-      margin:0 0 20px;
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .ctaRow{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:transparent;
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+    }
+    .btn-primary:hover {
+      background: #6d28d9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(124, 58, 237, 0.45);
     }
 
-    .btn.primary{
-      background:linear-gradient(135deg,var(--accent),#4f46e5);
-      border:0;
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent-light);
     }
 
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
+    /* Sidebar card */
+    .sidebar-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .section{
-      padding:22px 0;
+    .sidebar-card h3 {
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    h2{
-      font-size:26px;
-      margin:0 0 12px;
+    .sidebar-card .icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-glow);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
     }
 
-    p, li{
-      color:var(--muted);
-      line-height:1.7;
+    .location-badge {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    ul{
-      margin:0;
-      padding-left:20px;
+    .loc-tag {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
+    .sidebar-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
-    footer{
-      padding:30px 0;
-      color:var(--muted);
-      font-size:13px;
-      border-top:1px solid var(--line);
-      margin-top:18px;
+    /* ===== STATS ===== */
+    .stats {
+      padding: 0 0 56px;
     }
 
-    @media (max-width: 900px){
-      .hero,.grid{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .logoMark{width:92px;height:92px}
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .stat-card:hover {
+      border-color: var(--accent);
+    }
+
+    .stat-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent-light);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 0;
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: all 0.25s;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-glow);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .service-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .service-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* When section */
+    .when-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .when-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      transition: border-color 0.3s;
+    }
+
+    .when-card:hover {
+      border-color: var(--green);
+    }
+
+    .when-check {
+      width: 28px;
+      height: 28px;
+      background: var(--green-glow);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--green);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .when-card span {
+      font-size: 0.9rem;
+    }
+
+    /* Why section */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .why-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all 0.25s;
+    }
+
+    .why-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .why-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 28px 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin: 0 auto 14px;
+    }
+
+    .step h4 {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Other services */
+    .other-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .other-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.25s;
+    }
+
+    .other-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .other-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--accent-glow);
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .other-card h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .other-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .other-card .arrow {
+      margin-left: auto;
+      color: var(--accent-light);
+      font-size: 1.2rem;
+    }
+
+    /* CTA Final */
+    .cta-section {
+      padding: 64px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--accent), #6d28d9);
+      border-radius: var(--radius);
+      padding: 48px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 28px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--accent);
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      border: none;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .when-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .other-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .cta-box { padding: 32px 20px; }
+      .cta-box h2 { font-size: 1.4rem; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo">
         <div class="logoMark">
-          <img src="logo.png" alt="Logo NATIVE"
-               onerror="this.style.display='none'; this.parentElement.textContent='N'; this.parentElement.style.fontWeight='900';" />
+          <img src="logo.png" alt="Logo NATIVE" width="56" height="56">
         </div>
-
-        <div class="brandTitle">
-          <strong>NATIVE Inteligência Territorial e Ambiental</strong>
-          <span class="badge">Topografia • Georreferenciamento • Ambiental</span>
+        <div class="brand-text">
+          <span class="brand-name">NATIVE Inteligencia Territorial e Ambiental</span>
+          <span class="brand-tag">Topografia &bull; Georreferenciamento &bull; Ambiental</span>
         </div>
-      </div>
-
+      </a>
       <nav>
-        <a href="index.html">Início</a>
+        <a href="index.html">Inicio</a>
         <a href="topografia-veranopolis.html">Topografia</a>
         <a href="georreferenciamento-veranopolis.html">Georreferenciamento</a>
-        <a href="licenciamento-ambiental-veranopolis.html">Licenciamento</a>
+        <a href="licenciamento-ambiental-veranopolis.html" class="active">Licenciamento</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <span class="pill">Licenciamento Ambiental • Veranópolis e região</span>
-          <h1>Licenciamento Ambiental em Veranópolis com clareza técnica e responsabilidade.</h1>
-          <p class="sub">
-            A NATIVE atua com licenciamento ambiental, regularização de áreas, diagnóstico ambiental
-            e suporte técnico para processos que exigem segurança, organização e visão prática.
-          </p>
-
-          <div class="ctaRow">
-            <a class="btn primary" href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Licenciamento%20Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" target="_blank" rel="noopener">
-              💬 Solicitar orçamento
-            </a>
-            <a class="btn" href="index.html">← Voltar ao site</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="pill"><span class="pill-dot"></span> Licenciamento Ambiental &bull; Veranopolis e regiao</div>
+            <h1>Licenciamento Ambiental em <span>Veranopolis</span> com clareza tecnica e responsabilidade.</h1>
+            <p class="hero-desc">
+              A NATIVE atua com licenciamento ambiental, regularizacao de areas, diagnostico ambiental
+              e suporte tecnico para processos que exigem seguranca, organizacao e visao pratica.
+            </p>
+            <div class="cta-row">
+              <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Licenciamento%20Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn-primary" target="_blank" rel="noopener">
+                &#x1F4AC; Solicitar orcamento
+              </a>
+              <a href="index.html" class="btn btn-ghost">&larr; Voltar ao site</a>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h3><span class="icon">&#x1F4CD;</span> Atendimento</h3>
+            <div class="location-badge">
+              <span class="loc-tag">&#x1F3E0; Veranopolis - RS</span>
+              <span class="loc-tag">&#x1F30E; RS, SC, PR e SP</span>
+            </div>
+            <p class="sidebar-desc">Atendimento tecnico para demandas ambientais com foco em clareza, regularizacao e seguranca no processo.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h2 style="font-size:22px;">Atendimento</h2>
-          <p>
-            Base em <strong style="color:#f1f5ff;">Veranópolis - RS</strong> com atuação em
-            <strong style="color:#f1f5ff;">RS, SC, PR e SP</strong>.
-          </p>
-          <p>
-            Atendimento técnico para demandas ambientais com foco em clareza, regularização
-            e segurança no processo.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="grid">
-          <div class="card">
-            <h2>O que fazemos</h2>
-            <ul>
-              <li>Licenciamento ambiental</li>
-              <li>Regularização de áreas</li>
-              <li>Diagnóstico ambiental</li>
-              <li>Cadastro Ambiental Rural (CAR)</li>
-              <li>Assessoria técnica completa</li>
-            </ul>
+    <!-- STATS -->
+    <section class="stats">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F4CB;</div>
+            <div class="stat-number">4</div>
+            <div class="stat-label">Estados atendidos</div>
           </div>
-
-          <div class="card">
-            <h2>Quando faz sentido buscar esse serviço</h2>
-            <ul>
-              <li>Regularização de atividade ou área</li>
-              <li>Necessidade de orientação técnica ambiental</li>
-              <li>Exigência documental em processos específicos</li>
-              <li>Busca por mais segurança e clareza no processo</li>
-            </ul>
+          <div class="stat-card">
+            <div class="stat-icon">&#x2705;</div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Responsabilidade tecnica</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F4AC;</div>
+            <div class="stat-number">Direto</div>
+            <div class="stat-label">Comunicacao com o cliente</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F4C4;</div>
+            <div class="stat-number">CAR</div>
+            <div class="stat-label">Cadastro Ambiental Rural</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="card">
-          <h2>Por que escolher a NATIVE?</h2>
-          <p>
-            Trabalhamos com responsabilidade técnica, leitura prática do cenário e comunicação clara
-            para que o cliente entenda o processo e saiba exatamente o próximo passo.
-          </p>
+    <div class="wrap"><hr class="divider"></div>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">O que fazemos</h2>
+        <p class="section-subtitle">Servicos de licenciamento ambiental com organizacao tecnica para cada etapa do processo.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">&#x1F4C3;</div>
+            <div>
+              <h4>Licenciamento ambiental</h4>
+              <p>Licencas previas, de instalacao e de operacao para atividades que exigem regularizacao ambiental.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F3DE;&#xFE0F;</div>
+            <div>
+              <h4>Regularizacao de areas</h4>
+              <p>Suporte tecnico para adequacao ambiental de propriedades rurais e urbanas.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F50D;</div>
+            <div>
+              <h4>Diagnostico ambiental</h4>
+              <p>Analise tecnica do cenario ambiental para embasar decisoes e atender exigencias legais.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F33F;</div>
+            <div>
+              <h4>Cadastro Ambiental Rural (CAR)</h4>
+              <p>Inscricao e regularizacao no CAR, obrigatorio para imoveis rurais em todo o Brasil.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F91D;</div>
+            <div>
+              <h4>Assessoria tecnica completa</h4>
+              <p>Acompanhamento do inicio ao fim, com orientacao clara em cada etapa do processo.</p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="card">
-          <h2>Outros serviços da NATIVE</h2>
-          <p>
-            <a href="topografia-veranopolis.html">Topografia em Veranópolis</a><br>
-            <a href="georreferenciamento-veranopolis.html">Georreferenciamento em Veranópolis</a>
-          </p>
+    <div class="wrap"><hr class="divider"></div>
+
+    <!-- WHEN -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Quando faz sentido buscar esse servico</h2>
+        <p class="section-subtitle">Situacoes comuns em que o licenciamento ambiental se torna necessario.</p>
+        <div class="when-grid">
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Regularizacao de atividade ou area com pendencias ambientais</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Necessidade de orientacao tecnica ambiental para seu projeto</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Exigencia documental em processos de orgaos ambientais</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Busca por mais seguranca e clareza no processo de licenciamento</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Inicio de nova atividade que exige licenca ambiental</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Renovacao ou adequacao de licencas ambientais existentes</span>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      © <span id="y"></span> NATIVE Inteligência Territorial e Ambiental • Todos os direitos reservados
-    </footer>
-  </div>
+    <div class="wrap"><hr class="divider"></div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+    <!-- PROCESS -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Como funciona</h2>
+        <p class="section-subtitle">Um processo organizado do inicio ao fim para voce ter clareza em cada etapa.</p>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>Contato inicial</h4>
+            <p>Voce nos conta sua demanda e tiramos as primeiras duvidas.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>Analise tecnica</h4>
+            <p>Avaliamos o cenario e definimos o melhor caminho para o licenciamento.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>Execucao</h4>
+            <p>Cuidamos de toda a documentacao, laudos e tramitacao necessaria.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>Entrega</h4>
+            <p>Voce recebe tudo organizado, com clareza e respaldo tecnico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><hr class="divider"></div>
+
+    <!-- WHY -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Por que escolher a NATIVE?</h2>
+        <p class="section-subtitle">Diferenciais que fazem diferenca no resultado do seu projeto.</p>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">&#x1F3AF;</div>
+            <h4>Clareza no processo</h4>
+            <p>Comunicacao direta para que voce entenda cada passo e saiba exatamente o que esta acontecendo.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#x1F6E1;&#xFE0F;</div>
+            <h4>Responsabilidade tecnica</h4>
+            <p>Trabalho assinado por profissional habilitado, com ART e respaldo legal completo.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#x1F4CD;</div>
+            <h4>Base em Veranopolis</h4>
+            <p>Conhecemos a regiao, os orgaos ambientais locais e as particularidades da Serra Gaucha.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><hr class="divider"></div>
+
+    <!-- OTHER SERVICES -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Outros servicos da NATIVE</h2>
+        <div class="other-grid">
+          <a href="topografia-veranopolis.html" class="other-card">
+            <div class="other-icon">&#x1F4D0;</div>
+            <div>
+              <h4>Topografia em Veranopolis</h4>
+              <p>Levantamentos, plantas, mapas e apoio tecnico para obras e regularizacao.</p>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </a>
+          <a href="georreferenciamento-veranopolis.html" class="other-card">
+            <div class="other-icon">&#x1F6F0;&#xFE0F;</div>
+            <div>
+              <h4>Georreferenciamento em Veranopolis</h4>
+              <p>Georreferenciamento rural, INCRA, SIGEF e seguranca juridica.</p>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta-box">
+          <h2>Precisa de licenciamento ambiental?</h2>
+          <p>Fale com a NATIVE e tenha clareza, seguranca e organizacao no seu processo.</p>
+          <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Licenciamento%20Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn-white" target="_blank" rel="noopener">
+            &#x1F4AC; Solicitar orcamento pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      &copy; 2026 NATIVE Inteligencia Territorial e Ambiental &bull; Todos os direitos reservados
+    </div>
+  </footer>
+
 </body>
 </html>
