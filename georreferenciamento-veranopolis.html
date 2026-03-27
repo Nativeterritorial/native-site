@@ -1,321 +1,696 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Georreferenciamento em Veranópolis | NATIVE</title>
-  <meta name="description" content="Georreferenciamento de imóveis rurais em Veranópolis. INCRA, SIGEF e regularização com responsabilidade técnica pela NATIVE." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Georreferenciamento em Veranópolis | NATIVE Inteligência Territorial</title>
+  <meta name="description" content="Georreferenciamento de imóveis rurais em Veranópolis e região. Processos INCRA, SIGEF, levantamento de campo e segurança jurídica com a NATIVE.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Georreferenciamento em Veranópolis | NATIVE">
+  <meta property="og:description" content="Georreferenciamento rural, processos INCRA e SIGEF em Veranópolis e região com a NATIVE Inteligência Territorial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NATIVE Inteligência Territorial e Ambiental",
+    "description": "Georreferenciamento de imóveis rurais, processos INCRA/SIGEF e segurança jurídica em Veranópolis e região.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Veranópolis",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["RS", "SC", "PR", "SP"],
+    "telephone": "+5554997104400",
+    "url": "https://nativeterritorial.com.br"
+  }
+  </script>
   <style>
-    :root{
-      --bg:#333333;
-      --card:#1f1f1f;
-      --muted:#c7cad1;
-      --text:#f1f5ff;
-      --accent:#7c3aed;
-      --line:#3f3f3f;
-      --radius:18px;
+    :root {
+      --bg: #1a1a2e;
+      --bg-light: #16213e;
+      --card: #1c1c36;
+      --card-hover: #232347;
+      --muted: #a8b2d1;
+      --text: #e6f1ff;
+      --accent: #7c3aed;
+      --accent-light: #a78bfa;
+      --accent-glow: rgba(124, 58, 237, 0.15);
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.12);
+      --line: #2a2a4a;
+      --radius: 16px;
+      --radius-sm: 10px;
     }
 
-    *{box-sizing:border-box}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
     }
 
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px;
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:10px 0;
-      flex-wrap:wrap;
+    .logo { display: flex; align-items: center; gap: 14px; }
+
+    .logoMark {
+      width: 56px; height: 56px;
+      display: grid; place-items: center;
+      overflow: hidden; flex-shrink: 0;
     }
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      font-weight:800;
+    .logoMark img { width: 100%; height: 100%; object-fit: contain; }
+
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name { font-weight: 800; font-size: 1rem; letter-spacing: -0.02em; }
+    .brand-tag { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+
+    nav { display: flex; gap: 6px; flex-wrap: wrap; }
+    nav a {
+      font-size: 0.85rem; padding: 6px 14px;
+      border-radius: 8px; transition: all 0.2s; color: var(--muted);
+    }
+    nav a:hover, nav a.active { background: var(--accent-glow); color: var(--accent-light); }
+
+    .hero { padding: 72px 0 56px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: start;
     }
 
-    .logoMark{
-      width:120px;
-      height:120px;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-      flex-shrink:0;
-      background:transparent;
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      color: var(--accent-light);
+      font-size: 0.82rem; font-weight: 600;
+      padding: 6px 16px; border-radius: 50px; margin-bottom: 20px;
     }
 
-    .logoMark img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      padding:4px;
+    .pill-dot {
+      width: 7px; height: 7px;
+      background: var(--accent); border-radius: 50%;
+      animation: pulse 2s infinite;
     }
 
-    .brandTitle{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    .hero h1 {
+      font-size: 2.6rem; font-weight: 800;
+      line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--accent-light); }
+
+    .hero-desc {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 540px; margin-bottom: 28px;
     }
 
-    .brandTitle strong{
-      font-size:18px;
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.95rem; font-weight: 700;
+      padding: 14px 28px; border-radius: 12px;
+      transition: all 0.25s; cursor: pointer; border: none;
     }
 
-    .badge{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;
-      border-radius:999px;
-      margin-top:8px;
-      width:max-content;
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+    }
+    .btn-primary:hover {
+      background: #6d28d9; transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(124, 58, 237, 0.45);
     }
 
-    nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
+    .btn-ghost {
+      background: transparent; color: var(--muted);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent-light); }
+
+    .sidebar-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 28px;
+      display: flex; flex-direction: column; gap: 20px;
     }
 
-    nav a{
-      color:var(--muted);
-      font-size:14px;
+    .sidebar-card h3 { font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+
+    .sidebar-card .icon {
+      width: 36px; height: 36px;
+      background: var(--accent-glow); border-radius: 10px;
+      display: grid; place-items: center;
+      font-size: 1.1rem; flex-shrink: 0;
     }
 
-    nav a:hover{
-      color:var(--text);
+    .location-badge { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .loc-tag {
+      background: var(--bg); border: 1px solid var(--line);
+      padding: 6px 14px; border-radius: 8px;
+      font-size: 0.82rem; font-weight: 600;
     }
 
-    .hero{
-      padding:34px 0 18px;
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:22px;
-      align-items:start;
+    .sidebar-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    .stats { padding: 0 0 56px; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    .stat-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius-sm); padding: 24px; text-align: center;
+      transition: border-color 0.3s;
+    }
+    .stat-card:hover { border-color: var(--accent); }
+
+    .stat-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .stat-number { font-size: 1.8rem; font-weight: 800; color: var(--accent-light); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+    .section { padding: 56px 0; }
+
+    .section-title {
+      font-size: 1.7rem; font-weight: 800;
+      margin-bottom: 12px; letter-spacing: -0.02em;
     }
 
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
-      font-size:12px;
-      margin-bottom:14px;
+    .section-subtitle {
+      color: var(--muted); font-size: 0.95rem;
+      max-width: 600px; margin-bottom: 36px;
     }
 
-    h1{
-      font-size:44px;
-      line-height:1.05;
-      margin:0 0 14px;
+    .divider { height: 1px; background: var(--line); margin: 0; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
     }
 
-    .sub{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.7;
-      margin:0 0 20px;
+    .service-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius-sm); padding: 24px;
+      display: flex; gap: 16px; align-items: flex-start;
+      transition: all 0.25s;
+    }
+    .service-card:hover { border-color: var(--accent); background: var(--card-hover); transform: translateY(-2px); }
+
+    .service-icon {
+      width: 44px; height: 44px;
+      background: var(--accent-glow); border-radius: 12px;
+      display: grid; place-items: center;
+      font-size: 1.2rem; flex-shrink: 0;
     }
 
-    .ctaRow{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+    .service-card h4 { font-size: 0.95rem; margin-bottom: 4px; }
+    .service-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+    .when-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .when-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius-sm); padding: 20px 24px;
+      display: flex; gap: 14px; align-items: center;
+      transition: border-color 0.3s;
+    }
+    .when-card:hover { border-color: var(--green); }
+
+    .when-check {
+      width: 28px; height: 28px;
+      background: var(--green-glow); border-radius: 8px;
+      display: grid; place-items: center; flex-shrink: 0;
+      color: var(--green); font-size: 0.9rem; font-weight: 700;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:transparent;
+    .when-card span { font-size: 0.9rem; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .why-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 32px 24px; text-align: center;
+      transition: all 0.25s;
+    }
+    .why-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .why-icon { font-size: 2rem; margin-bottom: 16px; }
+    .why-card h4 { font-size: 1rem; margin-bottom: 8px; }
+    .why-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    .step {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius-sm); padding: 28px 20px;
+      text-align: center;
     }
 
-    .btn.primary{
-      background:linear-gradient(135deg,var(--accent),#4f46e5);
-      border:0;
+    .step-number {
+      width: 36px; height: 36px;
+      background: var(--accent); color: #fff;
+      border-radius: 50%; display: grid; place-items: center;
+      font-weight: 800; font-size: 0.85rem;
+      margin: 0 auto 14px;
     }
 
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
+    .step h4 { font-size: 0.9rem; margin-bottom: 6px; }
+    .step p { font-size: 0.78rem; color: var(--muted); }
+
+    .other-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .other-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 28px;
+      display: flex; align-items: center; gap: 20px;
+      transition: all 0.25s;
+    }
+    .other-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .other-icon {
+      width: 52px; height: 52px;
+      background: var(--accent-glow); border-radius: 14px;
+      display: grid; place-items: center;
+      font-size: 1.5rem; flex-shrink: 0;
     }
 
-    .section{
-      padding:22px 0;
+    .other-card h4 { font-size: 1rem; margin-bottom: 4px; }
+    .other-card p { font-size: 0.82rem; color: var(--muted); }
+    .other-card .arrow { margin-left: auto; color: var(--accent-light); font-size: 1.2rem; }
+
+    .cta-section { padding: 64px 0; }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--accent), #6d28d9);
+      border-radius: var(--radius); padding: 48px; text-align: center;
+    }
+    .cta-box h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    .cta-box p { font-size: 1rem; opacity: 0.9; margin-bottom: 28px; }
+
+    .btn-white {
+      background: #fff; color: var(--accent);
+      font-weight: 700; padding: 16px 36px;
+      border-radius: 12px; font-size: 1rem;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.25s; border: none;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0; text-align: center;
+      font-size: 0.8rem; color: var(--muted);
     }
 
-    h2{
-      font-size:26px;
-      margin:0 0 12px;
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; }
+
+    .faq-item {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius-sm); overflow: hidden;
     }
 
-    p, li{
-      color:var(--muted);
-      line-height:1.7;
+    .faq-question {
+      width: 100%; background: none; border: none; color: var(--text);
+      padding: 20px 24px; font-size: 0.95rem; font-weight: 700;
+      text-align: left; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--card-hover); }
+    .faq-question .faq-toggle { color: var(--accent-light); font-size: 1.2rem; transition: transform 0.3s; }
+
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
     }
 
-    ul{
-      margin:0;
-      padding-left:20px;
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.88rem; color: var(--muted); line-height: 1.7;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .when-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .other-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
     }
 
-    footer{
-      padding:30px 0;
-      color:var(--muted);
-      font-size:13px;
-      border-top:1px solid var(--line);
-      margin-top:18px;
-    }
-
-    @media (max-width: 900px){
-      .hero,.grid{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .logoMark{width:92px;height:92px}
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .cta-box { padding: 32px 20px; }
+      .cta-box h2 { font-size: 1.4rem; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
+
+  <header>
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo">
         <div class="logoMark">
-          <img src="logo.png" alt="Logo NATIVE"
-               onerror="this.style.display='none'; this.parentElement.textContent='N'; this.parentElement.style.fontWeight='900';" />
+          <img src="logo.png" alt="Logo NATIVE" width="56" height="56">
         </div>
-
-        <div class="brandTitle">
-          <strong>NATIVE Inteligência Territorial e Ambiental</strong>
-          <span class="badge">Topografia • Georreferenciamento • Ambiental</span>
+        <div class="brand-text">
+          <span class="brand-name">NATIVE Inteligencia Territorial e Ambiental</span>
+          <span class="brand-tag">Topografia &bull; Georreferenciamento &bull; Ambiental</span>
         </div>
-      </div>
-
+      </a>
       <nav>
-        <a href="index.html">Início</a>
+        <a href="index.html">Inicio</a>
         <a href="topografia-veranopolis.html">Topografia</a>
-        <a href="georreferenciamento-veranopolis.html">Georreferenciamento</a>
+        <a href="georreferenciamento-veranopolis.html" class="active">Georreferenciamento</a>
         <a href="licenciamento-ambiental-veranopolis.html">Licenciamento</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <span class="pill">Georreferenciamento • Veranópolis e região</span>
-          <h1>Georreferenciamento em Veranópolis com precisão técnica e segurança jurídica.</h1>
-          <p class="sub">
-            A NATIVE atua com georreferenciamento de imóveis rurais, processos ligados ao INCRA e SIGEF,
-            levantamento de campo e organização técnica para regularização com clareza e responsabilidade.
-          </p>
-
-          <div class="ctaRow">
-            <a class="btn primary" href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Georreferenciamento.%20Cidade:%20____%20%7C%20Demanda:%20____" target="_blank" rel="noopener">
-              💬 Solicitar orçamento
-            </a>
-            <a class="btn" href="index.html">← Voltar ao site</a>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="pill"><span class="pill-dot"></span> Georreferenciamento &bull; Veranopolis e regiao</div>
+            <h1>Georreferenciamento em <span>Veranopolis</span> com precisao tecnica e seguranca juridica.</h1>
+            <p class="hero-desc">
+              A NATIVE atua com georreferenciamento de imoveis rurais, processos ligados ao INCRA e SIGEF,
+              levantamento de campo e organizacao tecnica para regularizacao com clareza e responsabilidade.
+            </p>
+            <div class="cta-row">
+              <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Georreferenciamento.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn-primary" target="_blank" rel="noopener">
+                &#x1F4AC; Solicitar orcamento
+              </a>
+              <a href="index.html" class="btn btn-ghost">&larr; Voltar ao site</a>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h3><span class="icon">&#x1F4CD;</span> Atendimento</h3>
+            <div class="location-badge">
+              <span class="loc-tag">&#x1F3E0; Veranopolis - RS</span>
+              <span class="loc-tag">&#x1F30E; RS, SC, PR e SP</span>
+            </div>
+            <p class="sidebar-desc">Suporte tecnico para demandas de georreferenciamento com foco em seguranca, regularizacao e organizacao do processo.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h2 style="font-size:22px;">Atendimento</h2>
-          <p>
-            Base em <strong style="color:#f1f5ff;">Veranópolis - RS</strong> com atuação em
-            <strong style="color:#f1f5ff;">RS, SC, PR e SP</strong>.
-          </p>
-          <p>
-            Suporte técnico para demandas de georreferenciamento com foco em segurança, regularização
-            e organização do processo.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="grid">
-          <div class="card">
-            <h2>Serviços realizados</h2>
-            <ul>
-              <li>Georreferenciamento de imóveis rurais</li>
-              <li>Processos conforme INCRA</li>
-              <li>Envio e acompanhamento no SIGEF</li>
-              <li>Levantamento de campo com precisão</li>
-              <li>Assessoria técnica completa</li>
-            </ul>
+    <section class="stats">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F6F0;&#xFE0F;</div>
+            <div class="stat-number">GNSS</div>
+            <div class="stat-label">Receptores de alta precisao</div>
           </div>
-
-          <div class="card">
-            <h2>Quando faz sentido buscar esse serviço</h2>
-            <ul>
-              <li>Regularização de imóvel rural</li>
-              <li>Desmembramento ou venda da área</li>
-              <li>Exigência documental em cartório ou processo</li>
-              <li>Necessidade de mais segurança jurídica</li>
-            </ul>
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F4CB;</div>
+            <div class="stat-number">SIGEF</div>
+            <div class="stat-label">Certificacao e envio</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#x2705;</div>
+            <div class="stat-number">ART</div>
+            <div class="stat-label">Responsabilidade tecnica</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#x1F512;</div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Seguranca juridica</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="card">
-          <h2>Por que escolher a NATIVE?</h2>
-          <p>
-            Trabalhamos com responsabilidade técnica, clareza no processo e leitura prática da demanda,
-            para que o cliente saiba exatamente o que está sendo feito e qual é o próximo passo.
-          </p>
+    <div class="wrap"><hr class="divider"></div>
+
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Servicos realizados</h2>
+        <p class="section-subtitle">Georreferenciamento tecnico com foco em seguranca juridica e conformidade com o INCRA.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">&#x1F30D;</div>
+            <div>
+              <h4>Georreferenciamento de imoveis rurais</h4>
+              <p>Levantamento completo com coordenadas georreferenciadas conforme normas do INCRA.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F4C4;</div>
+            <div>
+              <h4>Processos conforme INCRA</h4>
+              <p>Preparacao de toda a documentacao tecnica exigida pelo Instituto Nacional de Colonizacao e Reforma Agraria.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F4E1;</div>
+            <div>
+              <h4>Envio e acompanhamento no SIGEF</h4>
+              <p>Submissao das pecas tecnicas no Sistema de Gestao Fundiaria e acompanhamento ate a certificacao.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F4CD;</div>
+            <div>
+              <h4>Levantamento de campo com precisao</h4>
+              <p>Coleta de dados em campo com receptores GNSS de alta precisao para resultados confiaveis.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">&#x1F91D;</div>
+            <div>
+              <h4>Assessoria tecnica completa</h4>
+              <p>Orientacao em cada etapa: do planejamento ao registro em cartorio com seguranca juridica.</p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="card">
-          <h2>Outros serviços da NATIVE</h2>
-          <p>
-            <a href="topografia-veranopolis.html">Topografia em Veranópolis</a><br>
-            <a href="licenciamento-ambiental-veranopolis.html">Licenciamento Ambiental em Veranópolis</a>
-          </p>
+    <div class="wrap"><hr class="divider"></div>
+
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Quando faz sentido buscar esse servico</h2>
+        <p class="section-subtitle">Situacoes em que o georreferenciamento e necessario ou recomendado.</p>
+        <div class="when-grid">
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Regularizacao de imovel rural junto ao cartorio de registro</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Desmembramento, unificacao ou venda de area rural</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Exigencia documental em cartorio ou processo judicial</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Necessidade de maior seguranca juridica sobre os limites do imovel</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Sucessao familiar ou inventario de propriedade rural</span>
+          </div>
+          <div class="when-card">
+            <div class="when-check">&#x2713;</div>
+            <span>Adequacao a Lei 10.267/2001 (obrigatoriedade do georreferenciamento)</span>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      © <span id="y"></span> NATIVE Inteligência Territorial e Ambiental • Todos os direitos reservados
-    </footer>
-  </div>
+    <div class="wrap"><hr class="divider"></div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Como funciona</h2>
+        <p class="section-subtitle">Processo claro e organizado, do primeiro contato ate o registro em cartorio.</p>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>Contato e analise</h4>
+            <p>Entendemos sua demanda e analisamos a documentacao existente do imovel.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>Levantamento de campo</h4>
+            <p>Coleta de coordenadas com GNSS de precisao e identificacao dos limites.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>Processamento e SIGEF</h4>
+            <p>Geracao das pecas tecnicas, memorial descritivo e envio ao SIGEF para certificacao.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>Certificacao e registro</h4>
+            <p>Acompanhamento ate a certificacao final e suporte para averbacao em cartorio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><hr class="divider"></div>
+
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Por que escolher a NATIVE?</h2>
+        <p class="section-subtitle">Diferenciais que garantem seguranca e confianca no seu georreferenciamento.</p>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">&#x1F512;</div>
+            <h4>Seguranca juridica</h4>
+            <p>Processo conforme as normas do INCRA e legislacao vigente, protegendo seu patrimonio.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#x1F4CB;</div>
+            <h4>Dominio do SIGEF</h4>
+            <p>Experiencia no envio e acompanhamento de processos no sistema, evitando retrabalho.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#x1F4CD;</div>
+            <h4>Base em Veranopolis</h4>
+            <p>Atuacao na Serra Gaucha com conhecimento das particularidades fundiarias da regiao.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><hr class="divider"></div>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Duvidas frequentes</h2>
+        <p class="section-subtitle">Respostas rapidas sobre georreferenciamento de imoveis rurais.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              O que e georreferenciamento de imoveis rurais?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                E o processo de determinar as coordenadas geograficas precisas dos vertices (pontos limites) de um imovel rural, vinculando-os ao Sistema Geodesico Brasileiro. Isso garante que o imovel tenha sua localizacao e limites definidos com precisao e respaldo legal.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              O georreferenciamento e obrigatorio?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Sim. A Lei 10.267/2001 tornou obrigatorio o georreferenciamento para imoveis rurais em diversas situacoes, como transferencia, desmembramento, parcelamento e financiamento. Os prazos variam conforme o tamanho do imovel.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Quanto tempo leva o processo completo?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                O prazo varia conforme a complexidade do imovel e a documentacao existente. Em geral, o levantamento de campo e processamento levam algumas semanas, e a certificacao no SIGEF pode levar de dias a algumas semanas adicionais.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><hr class="divider"></div>
+
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Outros servicos da NATIVE</h2>
+        <div class="other-grid">
+          <a href="topografia-veranopolis.html" class="other-card">
+            <div class="other-icon">&#x1F4D0;</div>
+            <div>
+              <h4>Topografia em Veranopolis</h4>
+              <p>Levantamentos, plantas, mapas e apoio tecnico para obras e regularizacao.</p>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </a>
+          <a href="licenciamento-ambiental-veranopolis.html" class="other-card">
+            <div class="other-icon">&#x1F33F;</div>
+            <div>
+              <h4>Licenciamento Ambiental em Veranopolis</h4>
+              <p>Regularizacao ambiental, CAR, diagnostico e assessoria completa.</p>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta-box">
+          <h2>Precisa de georreferenciamento?</h2>
+          <p>Fale com a NATIVE e garanta seguranca juridica, precisao e organizacao no seu processo.</p>
+          <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Georreferenciamento.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn-white" target="_blank" rel="noopener">
+            &#x1F4AC; Solicitar orcamento pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      &copy; 2026 NATIVE Inteligencia Territorial e Ambiental &bull; Todos os direitos reservados
+    </div>
+  </footer>
+
 </body>
 </html>
