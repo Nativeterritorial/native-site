@@ -197,11 +197,16 @@ src="https://www.facebook.com/tr?id=1481999170005922&ev=PageView&noscript=1"
   .footer__links a:hover { color: #fff; }
 
   /* RESPONSIVE */
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     .nav__links { display: none; }
     .area__content, .mapa__inner, .contato__inner { grid-template-columns: 1fr; }
     .hero__btns { flex-direction: column; }
     .btn { justify-content: center; }
+    .sobre__grid { grid-template-columns: 1fr; }
+    .sobre__foto { height: 260px; }
+    .galeria__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .galeria__item--tall { grid-row: span 1; }
+    .galeria__item { height: 200px; }
   }
 </style>
 
