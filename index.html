@@ -1,1097 +1,616 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18051450854"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Topografia e Georreferenciamento em Veranópolis e região. NATIVE Inteligência Territorial e Ambiental — precisão, agilidade e segurança documental." />
+<meta name="keywords" content="topografia veranópolis, georreferenciamento veranópolis, SIGEF, INCRA, levantamento topográfico, georreferenciamento rural, NATIVE" />
+<meta property="og:title" content="Topografia e Georreferenciamento em Veranópolis | NATIVE" />
+<meta property="og:description" content="Topografia, georreferenciamento rural (SIGEF/INCRA) e licenciamento ambiental em Veranópolis e Serra Gaúcha." />
+<title>Topografia e Georreferenciamento em Veranópolis | NATIVE Territorial e Ambiental</title>
+
+<!-- ================================================
+     META PIXEL — substitua SEU_PIXEL_ID pelo seu ID
+     Encontre em: Gerenciador de Anúncios → Fontes de Dados → Pixels
+     ================================================ -->
+<!--
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18051450854');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID');
+fbq('track', 'PageView');
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Topografia e Georreferenciamento em Veranópolis | NATIVE Territorial e Ambiental</title>
-  <meta name="description" content="Topografia, georreferenciamento rural (SIGEF/INCRA), loteamentos e regularização de áreas em Veranópolis, Vila Flores, Nova Bassano e região. NATIVE Inteligência Territorial e Ambiental.">
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Topografia e Georreferenciamento em Veranópolis | NATIVE">
-  <meta property="og:description" content="Serviços de topografia, georreferenciamento rural, loteamentos e regularização em Veranópolis e região.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nativeterritorial.com.br/">
-  <meta property="og:locale" content="pt_BR">
-  <link rel="canonical" href="https://nativeterritorial.com.br/">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "NATIVE Inteligência Territorial e Ambiental",
-    "description": "Topografia, georreferenciamento rural, loteamentos e regularização de áreas em Veranópolis e região.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Veranópolis",
-      "addressRegion": "RS",
-      "addressCountry": "BR"
-    },
-    "areaServed": ["RS", "SC", "PR", "SP"],
-    "telephone": "+5554997104400",
-    "email": "contato@nativeterritorial.com.br",
-    "url": "https://nativeterritorial.com.br"
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+-->
+<!-- FIM META PIXEL -->
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --verde: #2d6a4f;
+    --verde-claro: #40916c;
+    --verde-escuro: #1b4332;
+    --bege: #f8f5f0;
+    --cinza: #4a4a4a;
+    --cinza-claro: #f0ede8;
+    --branco: #ffffff;
+    --fonte: 'Inter', sans-serif;
   }
-  </script>
-  <style>
-    :root {
-      --bg: #23261f;
-      --bg-light: #2c3028;
-      --card: #30362b;
-      --card-hover: #3a4135;
-      --muted: #cfc2ac;
-      --text: #f6f1e8;
-      --accent: #a38f6d;
-      --accent-light: #dcc8a7;
-      --accent-glow: rgba(163, 143, 109, 0.14);
-      --accent-glow-strong: rgba(163, 143, 109, 0.28);
-      --green: #6f8f6b;
-      --green-glow: rgba(111, 143, 107, 0.16);
-      --orange: #b88a52;
-      --orange-glow: rgba(184, 138, 82, 0.14);
-      --blue: #7e8f73;
-      --blue-glow: rgba(126, 143, 115, 0.14);
-      --line: #4b5345;
-      --radius: 16px;
-      --radius-sm: 10px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Ubuntu, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(35, 38, 31, 0.95);
-      border-bottom: 1px solid var(--line);
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .logo { display: flex; align-items: center; gap: 14px; }
-
-    .logoMark {
-      width: 52px; height: 52px;
-      display: grid; place-items: center;
-      overflow: hidden; flex-shrink: 0;
-    }
-
-    .logoMark img { width: 100%; height: 100%; object-fit: contain; }
-
-    .brand-text { display: flex; flex-direction: column; }
-    .brand-name { font-weight: 800; font-size: 0.95rem; letter-spacing: -0.02em; }
-    .brand-tag { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
-
-    nav { display: flex; gap: 4px; flex-wrap: wrap; }
-    nav a {
-      font-size: 0.84rem; padding: 7px 14px;
-      border-radius: 8px; transition: all 0.2s; color: var(--muted);
-      font-weight: 500;
-    }
-    nav a:hover { background: var(--accent-glow); color: var(--accent-light); }
-
-    /* ===== HERO ===== */
-    .hero {
-      padding: 72px 0 48px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--accent-glow);
-      border: 1px solid var(--accent-glow-strong);
-      color: var(--accent-light);
-      font-size: 0.82rem; font-weight: 600;
-      padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;
-    }
-
-    .pill-dot {
-      width: 7px; height: 7px;
-      background: var(--accent); border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-    .hero h1 {
-      font-size: 2.7rem; font-weight: 800;
-      line-height: 1.12; letter-spacing: -0.03em; margin-bottom: 20px;
-    }
-    .hero h1 span { color: var(--accent-light); }
-
-    .hero-desc {
-      font-size: 1.02rem; color: var(--muted);
-      max-width: 560px; margin-bottom: 12px;
-    }
-
-    .hero-desc-secondary {
-      font-size: 0.9rem; color: var(--muted);
-      opacity: 0.8; margin-bottom: 28px;
-    }
-
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 40px; }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.92rem; font-weight: 700;
-      padding: 14px 26px; border-radius: 12px;
-      transition: all 0.25s; cursor: pointer; border: none;
-    }
-
-    .btn-primary {
-      background: var(--accent); color: #fff;
-      box-shadow: 0 4px 20px rgba(111, 143, 107, 0.32);
-    }
-    .btn-primary:hover {
-      background: #5f785a; transform: translateY(-2px);
-      box-shadow: 0 6px 28px rgba(111, 143, 107, 0.40);
-    }
-
-    .btn-outline {
-      background: transparent; color: var(--text);
-      border: 1px solid var(--line);
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent-light); }
-
-    .btn-ghost {
-      background: transparent; color: var(--accent-light);
-      font-weight: 600; font-size: 0.88rem; padding: 10px 0;
-    }
-    .btn-ghost:hover { text-decoration: underline; }
-
-    /* Trust badges */
-    .trust-row {
-      display: flex; gap: 32px; flex-wrap: wrap;
-    }
-
-    .trust-item {
-      display: flex; align-items: center; gap: 10px;
-    }
-
-    .trust-icon {
-      width: 38px; height: 38px;
-      background: var(--accent-glow); border-radius: 10px;
-      display: grid; place-items: center; font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .trust-text strong { display: block; font-size: 0.82rem; }
-    .trust-text span { font-size: 0.72rem; color: var(--muted); }
-
-    /* Sidebar */
-    .sidebar {
-      display: flex; flex-direction: column; gap: 16px;
-    }
-
-    .sidebar-card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 28px;
-    }
-
-    .sidebar-card h3 {
-      font-size: 1.05rem; margin-bottom: 14px;
-      display: flex; align-items: center; gap: 10px;
-    }
-
-    .sidebar-desc {
-      font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px;
-    }
-
-    .profile-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-    }
-
-    .profile-card {
-      background: var(--bg); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 16px;
-      transition: border-color 0.3s;
-    }
-    .profile-card:hover { border-color: var(--accent); }
-
-    .profile-card strong {
-      font-size: 0.82rem; display: block; margin-bottom: 4px;
-    }
-
-    .profile-card p {
-      font-size: 0.75rem; color: var(--muted); line-height: 1.5;
-    }
-
-    .location-box {
-      background: var(--bg); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 14px 18px;
-      display: flex; align-items: center; gap: 10px;
-      font-size: 0.85rem;
-    }
-
-    .location-box .loc-icon {
-      font-size: 1.1rem;
-    }
-
-    /* ===== STATS BAR ===== */
-    .stats-bar {
-      padding: 0 0 56px;
-    }
-
-    .stats-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-    }
-
-    .stat-card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 24px; text-align: center;
-      transition: all 0.3s;
-    }
-    .stat-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-
-    .stat-icon { font-size: 1.5rem; margin-bottom: 8px; }
-    .stat-number { font-size: 1.6rem; font-weight: 800; color: var(--accent-light); }
-    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
-
-    /* ===== SECTIONS ===== */
-    .section { padding: 64px 0; }
-
-    .section-header { margin-bottom: 40px; }
-
-    .section-label {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--accent-light); font-size: 0.78rem;
-      font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.08em; margin-bottom: 12px;
-    }
-
-    .section-label-dot {
-      width: 6px; height: 6px;
-      background: var(--accent); border-radius: 50%;
-    }
-
-    .section-title {
-      font-size: 1.8rem; font-weight: 800;
-      margin-bottom: 12px; letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
-    .section-subtitle {
-      color: var(--muted); font-size: 0.95rem; max-width: 640px;
-    }
-
-    .divider { height: 1px; background: var(--line); border: none; }
-
-    /* ===== SERVICES ===== */
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-    }
-
-    .svc-card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 32px 28px;
-      transition: all 0.3s; position: relative; overflow: hidden;
-    }
-    .svc-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-
-    .svc-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; background: var(--accent); opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .svc-card:hover::before { opacity: 1; }
-
-    .svc-badge {
-      display: inline-block;
-      background: var(--accent-glow); border: 1px solid var(--accent-glow-strong);
-      color: var(--accent-light); font-size: 0.72rem; font-weight: 700;
-      padding: 4px 12px; border-radius: 6px; margin-bottom: 16px;
-    }
-
-    .svc-icon {
-      font-size: 2rem; margin-bottom: 16px;
-    }
-
-    .svc-card h3 { font-size: 1.05rem; margin-bottom: 10px; line-height: 1.3; }
-
-    .svc-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-
-    .svc-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--accent-light); font-size: 0.82rem; font-weight: 600;
-      margin-top: 16px; transition: gap 0.2s;
-    }
-    .svc-link:hover { gap: 10px; }
-
-    /* ===== HOW IT WORKS ===== */
-    .steps-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-      position: relative;
-    }
-
-    .step {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 32px 24px;
-      text-align: center; position: relative;
-      transition: all 0.3s;
-    }
-    .step:hover { border-color: var(--accent); transform: translateY(-2px); }
-
-    .step-number {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, #6f8f6b, #a38f6d);
-      color: #fff; border-radius: 50%;
-      display: grid; place-items: center;
-      font-weight: 800; font-size: 1.1rem;
-      margin: 0 auto 18px;
-      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
-    }
-
-    .step h4 { font-size: 1rem; margin-bottom: 8px; }
-    .step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-
-    /* ===== AREA ===== */
-    .area-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;
-    }
-
-    .area-content p {
-      font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 20px;
-    }
-
-    .area-content strong { color: var(--text); }
-
-    .city-tags {
-      display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0;
-    }
-
-    .city-tag {
-      background: var(--card); border: 1px solid var(--line);
-      padding: 8px 16px; border-radius: 8px;
-      font-size: 0.82rem; font-weight: 600;
-      transition: all 0.2s;
-    }
-    .city-tag:hover { border-color: var(--accent); color: var(--accent-light); }
-    .city-tag.highlight {
-      background: var(--accent-glow); border-color: var(--accent-glow-strong);
-      color: var(--accent-light);
-    }
-
-    .area-sidebar {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 32px;
-    }
-
-    .area-sidebar h3 { font-size: 1.1rem; margin-bottom: 16px; }
-
-    .need-list { display: flex; flex-direction: column; gap: 12px; }
-
-    .need-item {
-      display: flex; gap: 12px; align-items: flex-start;
-      padding: 14px 16px;
-      background: var(--bg); border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      transition: border-color 0.3s;
-    }
-    .need-item:hover { border-color: var(--green); }
-
-    .need-check {
-      width: 24px; height: 24px;
-      background: var(--green-glow); border-radius: 6px;
-      display: grid; place-items: center; flex-shrink: 0;
-      color: var(--green); font-size: 0.8rem; font-weight: 700;
-    }
-
-    .need-item span { font-size: 0.88rem; }
-
-    /* ===== WHY ===== */
-    .why-content {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;
-    }
-
-    .why-text p {
-      font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 16px;
-    }
-    .why-text strong { color: var(--text); }
-
-    .why-cards { display: flex; flex-direction: column; gap: 12px; }
-
-    .why-card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 20px;
-      display: flex; gap: 14px; align-items: flex-start;
-      transition: all 0.25s;
-    }
-    .why-card:hover { border-color: var(--accent); transform: translateX(4px); }
-
-    .why-icon {
-      width: 42px; height: 42px;
-      border-radius: 12px; display: grid; place-items: center;
-      font-size: 1.2rem; flex-shrink: 0;
-    }
-
-    .why-icon.purple { background: var(--accent-glow); }
-    .why-icon.green { background: var(--green-glow); }
-    .why-icon.orange { background: var(--orange-glow); }
-    .why-icon.blue { background: var(--blue-glow); }
-
-    .why-card h4 { font-size: 0.9rem; margin-bottom: 3px; }
-    .why-card p { font-size: 0.78rem; color: var(--muted); }
-
-    /* ===== FAQ ===== */
-    .faq-list { display: flex; flex-direction: column; gap: 10px; max-width: 800px; }
-
-    .faq-item {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); overflow: hidden;
-      transition: border-color 0.3s;
-    }
-    .faq-item:hover { border-color: rgba(163, 143, 109, 0.28); }
-
-    .faq-question {
-      width: 100%; background: none; border: none; color: var(--text);
-      padding: 20px 24px; font-size: 0.95rem; font-weight: 700;
-      text-align: left; cursor: pointer; display: flex;
-      justify-content: space-between; align-items: center;
-      transition: background 0.2s; font-family: inherit;
-    }
-    .faq-question:hover { background: var(--card-hover); }
-
-    .faq-toggle {
-      color: var(--accent-light); font-size: 1.3rem;
-      transition: transform 0.3s; flex-shrink: 0; margin-left: 16px;
-    }
-
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-
-    .faq-answer-inner {
-      padding: 0 24px 20px;
-      font-size: 0.88rem; color: var(--muted); line-height: 1.7;
-    }
-
-    .faq-item.open .faq-answer { max-height: 300px; }
-    .faq-item.open .faq-toggle { transform: rotate(45deg); }
-    .faq-item.open { border-color: rgba(163, 143, 109, 0.36); }
-
-    /* ===== CONTACT ===== */
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;
-    }
-
-    .contact-left p {
-      font-size: 0.95rem; color: var(--muted); margin-bottom: 24px; line-height: 1.7;
-    }
-
-    .contact-info { display: flex; flex-direction: column; gap: 14px; }
-
-    .contact-item {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 18px 22px;
-      display: flex; align-items: center; gap: 14px;
-    }
-
-    .contact-icon {
-      width: 40px; height: 40px;
-      background: var(--accent-glow); border-radius: 10px;
-      display: grid; place-items: center; font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .contact-item strong { font-size: 0.82rem; display: block; }
-    .contact-item span { font-size: 0.85rem; color: var(--muted); }
-
-    .contact-cta {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 36px;
-      text-align: center;
-    }
-
-    .contact-cta h3 { font-size: 1.2rem; margin-bottom: 12px; }
-    .contact-cta p { font-size: 0.88rem; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
-
-    .btn-whatsapp {
-      background: #25d366; color: #fff;
-      font-weight: 700; padding: 16px 32px;
-      border-radius: 12px; font-size: 1rem;
-      display: inline-flex; align-items: center; gap: 10px;
-      transition: all 0.25s; border: none;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    }
-    .btn-whatsapp:hover {
-      background: #1fb855; transform: translateY(-2px);
-      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4);
-    }
-
-    /* ===== CTA FINAL ===== */
-    .cta-section { padding: 64px 0; }
-
-    .cta-box {
-      background: linear-gradient(135deg, #6f8f6b, #a38f6d);
-      border-radius: var(--radius); padding: 56px 48px;
-      text-align: center; position: relative; overflow: hidden;
-    }
-
-    .cta-box::before {
-      content: ''; position: absolute; top: -50%; right: -20%;
-      width: 400px; height: 400px;
-      background: rgba(246,241,232,0.05); border-radius: 50%;
-    }
-
-    .cta-box h2 { font-size: 2rem; margin-bottom: 14px; position: relative; }
-    .cta-box p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; }
-
-    .btn-white {
-      background: #f6f1e8; color: #23261f;
-      font-weight: 700; padding: 16px 40px;
-      border-radius: 12px; font-size: 1rem;
-      display: inline-flex; align-items: center; gap: 10px;
-      transition: all 0.25s; border: none; position: relative;
-    }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-
-    /* ===== SERVICES FOOTER ===== */
-    .services-footer {
-      padding: 48px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .services-footer h3 {
-      font-size: 1.1rem; margin-bottom: 20px;
-    }
-
-    .sf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-
-    .sf-link {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 18px 22px;
-      display: flex; align-items: center; justify-content: space-between;
-      transition: all 0.25s; font-size: 0.9rem; font-weight: 600;
-    }
-    .sf-link:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--accent-light); }
-    .sf-link .arrow { color: var(--accent-light); }
-
-    /* ===== FOOTER ===== */
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 32px 0; text-align: center;
-      font-size: 0.78rem; color: var(--muted);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .area-grid { grid-template-columns: 1fr; }
-      .why-content { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .sf-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.1rem; }
-      .trust-row { gap: 20px; }
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.75rem; }
-      .hero { padding: 48px 0 32px; }
-      .section { padding: 48px 0; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-      nav { display: none; }
-      .cta-box { padding: 36px 24px; }
-      .cta-box h2 { font-size: 1.5rem; }
-      .section-title { font-size: 1.4rem; }
-      .profile-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--fonte); color: var(--cinza); background: var(--branco); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 72px 0; }
+  .section--alt { background: var(--bege); }
+  .section--dark { background: var(--verde-escuro); color: #fff; }
+
+  .label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--verde-claro); display: block; margin-bottom: 10px; }
+  .label--light { color: #a8d5be; }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; font-weight: 800; }
+  h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
+  h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+  p { line-height: 1.7; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: var(--verde-escuro); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav__inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1100px; margin: 0 auto; }
+  .nav__logo { display: flex; align-items: center; gap: 10px; }
+  .nav__logo img { height: 36px; }
+  .nav__logo span { color: #fff; font-size: 0.85rem; font-weight: 600; }
+  .nav__links { display: flex; gap: 28px; list-style: none; }
+  .nav__links a { color: rgba(255,255,255,0.75); font-size: 0.9rem; transition: color 0.2s; }
+  .nav__links a:hover { color: #fff; }
+  .nav__cta { background: var(--verde-claro); color: #fff !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; }
+
+  /* HERO */
+  .hero { background: var(--verde-escuro); color: #fff; padding: 80px 0 64px; }
+  .hero__eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: #a8d5be; margin-bottom: 20px; }
+  .hero h1 { color: #fff; margin-bottom: 20px; }
+  .hero h1 span { color: #74c69d; }
+  .hero__sub { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 640px; margin-bottom: 36px; line-height: 1.7; }
+  .hero__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn--green { background: var(--verde-claro); color: #fff; }
+  .btn--green:hover { background: #52b788; }
+  .btn--outline { border: 1.5px solid rgba(255,255,255,0.35); color: #fff; }
+  .btn--outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+  .btn--sm { padding: 10px 18px; font-size: 0.88rem; }
+
+  .hero__props { display: flex; flex-wrap: wrap; gap: 24px; }
+  .hero__prop { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+  .hero__prop strong { color: #fff; }
+
+  /* CARDS PERFIL */
+  .perfis { padding: 48px 0; background: var(--bege); }
+  .perfis__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 32px; }
+  .perfil { background: #fff; border-radius: 10px; padding: 24px; border-left: 4px solid var(--verde-claro); }
+  .perfil__icon { font-size: 1.8rem; margin-bottom: 12px; }
+  .perfil h3 { color: var(--verde-escuro); }
+
+  /* STATS */
+  .stats { background: var(--verde-claro); color: #fff; padding: 40px 0; }
+  .stats__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; text-align: center; }
+  .stat__num { font-size: 2.2rem; font-weight: 800; display: block; }
+  .stat__label { font-size: 0.82rem; opacity: 0.85; margin-top: 4px; display: block; }
+
+  /* SERVIÇOS */
+  .servicos__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+  .servico { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #e8e3dc; transition: box-shadow 0.2s; }
+  .servico:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .servico__num { font-size: 0.75rem; font-weight: 700; color: var(--verde-claro); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .servico__icon { font-size: 2rem; margin-bottom: 12px; }
+  .servico a { display: inline-block; margin-top: 14px; font-size: 0.88rem; font-weight: 600; color: var(--verde-claro); }
+
+  /* PROCESSO */
+  .processo__steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 40px; }
+  .step { text-align: center; padding: 24px; }
+  .step__num { width: 48px; height: 48px; border-radius: 50%; background: var(--verde-claro); color: #fff; font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+
+  /* ÁREA */
+  .area__content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; }
+  .area__lista { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+  .area__tag { background: rgba(64,145,108,0.12); color: var(--verde-escuro); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+  .area__checks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+  .area__checks li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; }
+  .area__checks li::before { content: "✓"; color: var(--verde-claro); font-weight: 700; flex-shrink: 0; }
+
+  /* MAPA */
+  .mapa { background: var(--bege); padding: 72px 0; }
+  .mapa__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .mapa__frame { border-radius: 12px; overflow: hidden; height: 380px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+  .mapa__frame iframe { width: 100%; height: 100%; border: 0; }
+  .mapa__info h2 { margin-bottom: 12px; }
+  .mapa__info p { color: #666; margin-bottom: 20px; line-height: 1.7; }
+  .mapa__endereco { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; font-size: 0.95rem; }
+  .mapa__endereco span { font-size: 1.2rem; flex-shrink: 0; }
+
+  /* DIFERENCIAIS */
+  .diferenciais__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
+  .diferencial { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 24px; }
+  .diferencial__icon { font-size: 1.6rem; margin-bottom: 12px; }
+  .diferencial h4 { color: #fff; margin-bottom: 8px; font-size: 1rem; }
+  .diferencial p { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+
+  /* DEPOIMENTOS */
+  .depoimentos { background: var(--bege); padding: 72px 0; }
+  .depoimentos__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+  .depoimento { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #e8e3dc; display: flex; flex-direction: column; gap: 16px; }
+  .depoimento__stars { color: var(--verde-claro); font-size: 17px; letter-spacing: 2px; }
+  .depoimento__texto { color: #555; font-size: 0.95rem; line-height: 1.7; font-style: italic; flex: 1; }
+  .depoimento__autor { display: flex; align-items: center; gap: 12px; }
+  .depoimento__avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--verde-claro); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .depoimento__autor strong { display: block; color: var(--verde-escuro); font-size: 0.9rem; }
+  .depoimento__autor span { color: #888; font-size: 0.8rem; }
+  .depoimento__badge { display: inline-block; background: rgba(64,145,108,0.1); color: var(--verde-escuro); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 4px; }
+
+  /* FAQ */
+  .faq { padding: 72px 0; }
+  .faq__lista { max-width: 760px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 12px; }
+  .faq__item { border: 1px solid #e8e3dc; border-radius: 10px; overflow: hidden; }
+  .faq__pergunta { width: 100%; text-align: left; padding: 18px 22px; background: #fff; border: none; cursor: pointer; font-size: 0.98rem; font-weight: 600; color: var(--verde-escuro); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq__pergunta:hover { background: var(--bege); }
+  .faq__seta { flex-shrink: 0; transition: transform 0.3s; font-size: 1.1rem; color: var(--verde-claro); }
+  .faq__item.aberto .faq__seta { transform: rotate(45deg); }
+  .faq__resposta { display: none; padding: 0 22px 18px; background: #fff; font-size: 0.94rem; color: #555; line-height: 1.7; }
+  .faq__item.aberto .faq__resposta { display: block; }
+  .faq__preco { background: rgba(64,145,108,0.07); border-left: 3px solid var(--verde-claro); border-radius: 6px; padding: 14px 18px; margin-top: 12px; font-size: 0.92rem; }
+  .faq__preco strong { color: var(--verde-escuro); display: block; margin-bottom: 6px; }
+
+  /* CONTATO */
+  .contato { background: var(--verde-escuro); color: #fff; padding: 72px 0; }
+  .contato__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .contato h2 { color: #fff; }
+  .contato__desc { color: rgba(255,255,255,0.7); margin: 12px 0 28px; }
+  .contato__items { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .contato__item { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+  .contato__item strong { color: #fff; display: block; margin-bottom: 2px; }
+  .contato__item span { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .contato__box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 28px; }
+  .contato__box p { color: rgba(255,255,255,0.7); font-size: 0.92rem; margin-bottom: 20px; }
+
+  /* FOOTER */
+  .footer { background: #0d2218; color: rgba(255,255,255,0.5); padding: 32px 0; }
+  .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 0.85rem; }
+  .footer__links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .footer__links a { color: rgba(255,255,255,0.5); }
+  .footer__links a:hover { color: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav__links { display: none; }
+    .area__content, .mapa__inner, .contato__inner { grid-template-columns: 1fr; }
+    .hero__btns { flex-direction: column; }
+    .btn { justify-content: center; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="wrap header-inner">
-      <a href="index.html" class="logo">
-        <div class="logoMark">
-          <img src="logo.png" alt="Logo NATIVE" width="52" height="52">
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">NATIVE Inteligência Territorial e Ambiental</span>
-          <span class="brand-tag">Topografia &bull; Georreferenciamento &bull; Ambiental</span>
-        </div>
-      </a>
-      <nav>
-        <a href="#servicos">Serviços</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#area">Área atendida</a>
-        <a href="#faq">Dúvidas</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo">
+      <img src="logo.png" alt="NATIVE" />
+      <span>NATIVE Inteligência Territorial</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#area">Área atendida</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#contato" class="nav__cta">Orçamento</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">Base em Veranópolis-RS • Atendimento em RS, SC, PR e SP</span>
+    <h1>Topografia e Georreferenciamento<br><span>em Veranópolis e Região</span></h1>
+    <p class="hero__sub">
+      A NATIVE Inteligência Territorial e Ambiental atua com serviços de topografia,
+      levantamento topográfico, georreferenciamento rural (SIGEF/INCRA),
+      loteamentos e regularização de áreas em Veranópolis, Vila Flores, Nova Bassano e região.
+    </p>
+    <div class="hero__btns">
+      <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn--green" target="_blank" rel="noopener">💬 Orçamento no WhatsApp</a>
+      <a href="#servicos" class="btn btn--outline">Ver serviços</a>
     </div>
-  </header>
+    <div class="hero__props">
+      <div class="hero__prop">🌎 <strong>4</strong> estados atendidos</div>
+      <div class="hero__prop">📐 <strong>GNSS</strong> equipamentos de precisão</div>
+      <div class="hero__prop">✅ <strong>ART</strong> responsabilidade técnica</div>
+      <div class="hero__prop">💬 <strong>Direto</strong> com o profissional</div>
+    </div>
+  </div>
+</section>
 
-  <main>
+<!-- PERFIS -->
+<section class="perfis">
+  <div class="container">
+    <span class="label">O que você resolve com a NATIVE</span>
+    <h2>Limites, mapas, documentação e leitura técnica do território</h2>
+    <div class="perfis__grid">
+      <div class="perfil">
+        <div class="perfil__icon">🌾</div>
+        <h3>Proprietário rural</h3>
+        <p>Evita prejuízo por área errada, acelera regularização e melhora a segurança documental.</p>
+      </div>
+      <div class="perfil">
+        <div class="perfil__icon">🏢</div>
+        <h3>Empresa / Investidor</h3>
+        <p>Compra, venda e implantação com documentação clara e menor risco técnico.</p>
+      </div>
+      <div class="perfil">
+        <div class="perfil__icon">⚖️</div>
+        <h3>Advogados e Cartórios</h3>
+        <p>Laudos, memoriais e documentação técnica com ART para processos e registros imobiliários.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
+<!-- SERVIÇOS -->
+<section class="section section--alt" id="servicos">
+  <div class="container">
+    <span class="label">Serviços</span>
+    <h2>Topografia, Georreferenciamento e Ambiental</h2>
+    <p>Soluções técnicas sob medida para imóveis rurais, áreas urbanas, loteamentos e regularização territorial.</p>
+    <div class="servicos__grid">
+      <div class="servico">
+        <div class="servico__num">Topografia</div>
+        <div class="servico__icon">📐</div>
+        <h3>Levantamento Topográfico e Planialtimétrico</h3>
+        <p>Executamos levantamento topográfico, planialtimétrico, plantas, mapas e conferência de área para terrenos urbanos, imóveis rurais, obras e implantação de projetos.</p>
+        <a href="https://nativeterritorial.com.br/topografia-veranopolis.html">Saiba mais →</a>
+      </div>
+      <div class="servico">
+        <div class="servico__num">Georreferenciamento</div>
+        <div class="servico__icon">🛰️</div>
+        <h3>Georreferenciamento Rural — SIGEF / INCRA</h3>
+        <p>Organizamos perímetro, compatibilização documental, mapas e acompanhamento técnico para processos de georreferenciamento conforme exigências do SIGEF e do INCRA.</p>
+        <a href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html">Saiba mais →</a>
+      </div>
+      <div class="servico">
+        <div class="servico__num">Loteamentos e Ambiental</div>
+        <div class="servico__icon">🏗️</div>
+        <h3>Loteamentos, Regularização e Suporte Ambiental</h3>
+        <p>Apoio técnico para loteamentos, conferência de lotes, regularização de áreas e demandas ambientais conectadas ao uso seguro do imóvel.</p>
+        <a href="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html">Saiba mais →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <span class="label">Processo</span>
+    <h2>Como funciona</h2>
+    <p>Do primeiro contato à entrega final, um processo claro e organizado.</p>
+    <div class="processo__steps">
+      <div class="step">
+        <div class="step__num">1</div>
+        <h3>Diagnóstico</h3>
+        <p>Entendemos seu objetivo, localização do imóvel e documentação disponível.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">2</div>
+        <h3>Campo</h3>
+        <p>Execução técnica no local com equipamentos de precisão (GNSS, estação total).</p>
+      </div>
+      <div class="step">
+        <div class="step__num">3</div>
+        <h3>Processamento</h3>
+        <p>Mapas, plantas, memoriais descritivos, relatórios e organização completa dos dados.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">4</div>
+        <h3>Entrega</h3>
+        <p>Tudo organizado com ART, orientação clara e indicação do próximo passo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁREA ATENDIDA -->
+<section class="section section--alt" id="area">
+  <div class="container">
+    <span class="label">Área de atendimento</span>
+    <h2>Topografia em Veranópolis e região</h2>
+    <div class="area__content">
+      <div>
+        <p>A NATIVE tem base em <strong>Veranópolis-RS</strong> e atende demandas em <strong>Vila Flores</strong>, <strong>Nova Bassano</strong> e outras cidades da região, além de atuar em <strong>Rio Grande do Sul, Santa Catarina, Paraná e São Paulo</strong>.</p>
+        <div class="area__lista">
+          <span class="area__tag">📍 Veranópolis</span>
+          <span class="area__tag">Vila Flores</span>
+          <span class="area__tag">Nova Bassano</span>
+          <span class="area__tag">Cotiporã</span>
+          <span class="area__tag">Fagundes Varela</span>
+          <span class="area__tag">Nova Prata</span>
+          <span class="area__tag">Serra Gaúcha</span>
+          <span class="area__tag">RS • SC • PR • SP</span>
+        </div>
+        <ul class="area__checks">
+          <li>Compra ou venda de terrenos</li>
+          <li>Regularização de imóveis rurais</li>
+          <li>Georreferenciamento para SIGEF/INCRA</li>
+          <li>Implantação de loteamentos</li>
+          <li>Conferência de área e divisas</li>
+          <li>Projetos de construção e obras</li>
+        </ul>
+      </div>
+      <div>
+        <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn--green" target="_blank" rel="noopener" style="width:100%; justify-content:center;">💬 Verificar atendimento na minha cidade</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="mapa" id="localizacao">
+  <div class="container">
+    <div class="mapa__inner">
+      <div class="mapa__frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55089.0!2d-51.542!3d-28.930!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c34000000001%3A0x1!2sVeran%C3%B3polis%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="NATIVE Territorial — Veranópolis RS"
+          allowfullscreen="">
+        </iframe>
+      </div>
+      <div class="mapa__info">
+        <span class="label">Localização</span>
+        <h2>Base em Veranópolis, RS</h2>
+        <p>Atendemos com agilidade toda a Serra Gaúcha e região, com deslocamento rápido para os municípios vizinhos.</p>
+        <div class="mapa__endereco">
+          <span>📍</span>
           <div>
-            <div class="pill"><span class="pill-dot"></span> Base em Veranópolis-RS &bull; Atendimento em RS, SC, PR e SP</div>
-            <h1>Topografia e Georreferenciamento em <span>Veranópolis</span> e Região</h1>
-            <p class="hero-desc">
-              A NATIVE Inteligência Territorial e Ambiental atua com serviços de topografia,
-              levantamento topográfico, georreferenciamento rural (SIGEF/INCRA),
-              loteamentos e regularização de áreas em Veranópolis, Vila Flores, Nova Bassano e região.
-            </p>
-            <p class="hero-desc-secondary">
-              Atendemos propriedades rurais, terrenos urbanos, empresas e investidores que precisam de
-              precisão, segurança documental e orientação técnica clara.
-            </p>
-            <div class="cta-row">
-              <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn-primary" target="_blank" rel="noopener">
-                &#x1F4AC; Orçamento no WhatsApp
-              </a>
-              <a href="#servicos" class="btn btn-outline">Ver serviços</a>
-              <a href="#contato" class="btn btn-ghost">&#x1F4CD; Falar com a NATIVE</a>
-            </div>
-            <div class="trust-row">
-              <div class="trust-item">
-                <div class="trust-icon">&#x1F3AF;</div>
-                <div class="trust-text">
-                  <strong>Precisão</strong>
-                  <span>Levantamento e documentação consistentes</span>
-                </div>
-              </div>
-              <div class="trust-item">
-                <div class="trust-icon">&#x26A1;</div>
-                <div class="trust-text">
-                  <strong>Agilidade</strong>
-                  <span>Processo objetivo e prazos claros</span>
-                </div>
-              </div>
-              <div class="trust-item">
-                <div class="trust-icon">&#x1F6E1;&#xFE0F;</div>
-                <div class="trust-text">
-                  <strong>Segurança</strong>
-                  <span>Decisão técnica + conformidade</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sidebar -->
-          <div class="sidebar">
-            <div class="sidebar-card">
-              <h3>O que você resolve com a NATIVE</h3>
-              <p class="sidebar-desc">Limites, mapas, documentação e leitura técnica do território para regularização, compra, venda, implantação e tomada de decisão com mais segurança.</p>
-              <div class="profile-grid">
-                <div class="profile-card">
-                  <strong>&#x1F33E; Proprietário rural</strong>
-                  <p>Evita prejuízo por área errada, acelera regularização e melhora a segurança documental.</p>
-                </div>
-                <div class="profile-card">
-                  <strong>&#x1F3E2; Empresa / Investidor</strong>
-                  <p>Compra, venda e implantação com documentação clara e menor risco técnico.</p>
-                </div>
-              </div>
-            </div>
-            <div class="location-box">
-              <span class="loc-icon">&#x1F4CD;</span>
-              Veranópolis, Vila Flores, Nova Bassano e demandas em RS, SC, PR e SP.
-            </div>
+            <strong>Veranópolis — RS</strong>
+            <p style="color:#666; font-size:0.9rem;">Atendimento também em RS, SC, PR e SP</p>
           </div>
         </div>
+        <div class="mapa__endereco">
+          <span>💬</span>
+          <div>
+            <strong>(54) 99710-4400</strong>
+            <p style="color:#666; font-size:0.9rem;">WhatsApp direto com o profissional</p>
+          </div>
+        </div>
+        <div class="mapa__endereco">
+          <span>📧</span>
+          <div>
+            <strong>contato@nativeterritorial.com.br</strong>
+          </div>
+        </div>
+        <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn--green btn--sm" target="_blank" rel="noopener" style="margin-top:20px;">💬 Falar no WhatsApp</a>
       </div>
-    </section>
-
-    <!-- ===== STATS ===== -->
-    <section class="stats-bar">
-      <div class="wrap">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon">&#x1F30E;</div>
-            <div class="stat-number">4</div>
-            <div class="stat-label">Estados atendidos</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">&#x1F4D0;</div>
-            <div class="stat-number">GNSS</div>
-            <div class="stat-label">Equipamentos de precisão</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">&#x2705;</div>
-            <div class="stat-number">ART</div>
-            <div class="stat-label">Responsabilidade técnica</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">&#x1F4AC;</div>
-            <div class="stat-number">Direto</div>
-            <div class="stat-label">Contato com o profissional</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== SERVICES ===== -->
-    <section class="section" id="servicos">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> Serviços</div>
-          <h2 class="section-title">Serviços de Topografia, Georreferenciamento e Ambiental</h2>
-          <p class="section-subtitle">Atuamos com soluções técnicas sob medida para imóveis rurais, áreas urbanas, loteamentos e regularização territorial.</p>
-        </div>
-        <div class="services-grid">
-          <div class="svc-card">
-            <div class="svc-badge">Topografia</div>
-            <div class="svc-icon">&#x1F4D0;</div>
-            <h3>Levantamento Topográfico e Planialtimétrico</h3>
-            <p>Executamos levantamento topográfico, levantamento planialtimétrico, plantas, mapas e conferência de área para terrenos urbanos, imóveis rurais, obras e implantação de projetos.</p>
-            <a href="topografia-veranopolis.html" class="svc-link">Saiba mais &rarr;</a>
-          </div>
-          <div class="svc-card">
-            <div class="svc-badge">Georreferenciamento</div>
-            <div class="svc-icon">&#x1F6F0;&#xFE0F;</div>
-            <h3>Georreferenciamento Rural - SIGEF / INCRA</h3>
-            <p>Organizamos perímetro, compatibilização documental, mapas e acompanhamento técnico para processos de georreferenciamento de imóveis rurais conforme exigências do SIGEF e do INCRA.</p>
-            <a href="georreferenciamento-veranopolis.html" class="svc-link">Saiba mais &rarr;</a>
-          </div>
-          <div class="svc-card">
-            <div class="svc-badge">Loteamentos e Ambiental</div>
-            <div class="svc-icon">&#x1F3D7;&#xFE0F;</div>
-            <h3>Loteamentos, Regularização e Suporte Ambiental</h3>
-            <p>Prestamos apoio técnico para loteamentos, conferência de lotes, regularização de áreas e demandas ambientais conectadas ao uso seguro do imóvel.</p>
-            <a href="licenciamento-ambiental-veranopolis.html" class="svc-link">Saiba mais &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== HOW IT WORKS ===== -->
-    <section class="section" id="como-funciona">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> Processo</div>
-          <h2 class="section-title">Como funciona</h2>
-          <p class="section-subtitle">Do primeiro contato à entrega final, um processo claro e organizado.</p>
-        </div>
-        <div class="steps-grid">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h4>Diagnóstico</h4>
-            <p>Entendemos seu objetivo, localização do imóvel e documentação disponível.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h4>Campo</h4>
-            <p>Execução técnica no local com equipamentos de precisão (GNSS, estação total).</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h4>Processamento</h4>
-            <p>Mapas, plantas, memoriais descritivos, relatórios e organização completa dos dados.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">4</div>
-            <h4>Entrega</h4>
-            <p>Tudo organizado com ART, orientação clara e indicação do próximo passo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== AREA ===== -->
-    <section class="section" id="area">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> Área de atendimento</div>
-          <h2 class="section-title">Topografia em Veranópolis e região</h2>
-        </div>
-        <div class="area-grid">
-          <div class="area-content">
-            <p>
-              A NATIVE tem base em <strong>Veranópolis-RS</strong> e atende demandas em
-              <strong>Vila Flores</strong>, <strong>Nova Bassano</strong> e outras cidades da região,
-              além de atuar em <strong>Rio Grande do Sul, Santa Catarina, Paraná e São Paulo</strong>.
-            </p>
-            <p>
-              Se você precisa de <strong>levantamento topográfico</strong>, <strong>georreferenciamento rural</strong>,
-              apoio técnico para <strong>loteamentos</strong> ou solução para <strong>regularização de área</strong>,
-              entre em contato e envie a cidade, o tipo de serviço e uma noção da demanda.
-            </p>
-            <div class="city-tags">
-              <span class="city-tag highlight">&#x1F4CD; Veranópolis</span>
-              <span class="city-tag">Vila Flores</span>
-              <span class="city-tag">Nova Bassano</span>
-              <span class="city-tag">Serra Gaúcha</span>
-              <span class="city-tag">RS</span>
-              <span class="city-tag">SC</span>
-              <span class="city-tag">PR</span>
-              <span class="city-tag">SP</span>
-            </div>
-          </div>
-          <div class="area-sidebar">
-            <h3>Quando você precisa desses serviços?</h3>
-            <div class="need-list">
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Compra ou venda de terrenos</span>
-              </div>
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Regularização de imóveis rurais</span>
-              </div>
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Georreferenciamento para SIGEF/INCRA</span>
-              </div>
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Implantação de loteamentos</span>
-              </div>
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Conferência de área e divisas</span>
-              </div>
-              <div class="need-item">
-                <div class="need-check">&#x2713;</div>
-                <span>Projetos de construção e obras</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== WHY ===== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> Diferenciais</div>
-          <h2 class="section-title">Por que contratar a NATIVE?</h2>
-        </div>
-        <div class="why-content">
-          <div class="why-text">
-            <p>
-              Um serviço de topografia bem executado <strong>reduz risco</strong>, evita divergência de área,
-              melhora a tomada de decisão e dá mais segurança para compra, venda, regularização,
-              implantação de obras e organização documental.
-            </p>
-            <p>
-              No caso de imóveis rurais, o <strong>georreferenciamento é decisivo</strong> para compatibilizar
-              perímetro, matrícula e documentação junto ao INCRA/SIGEF, garantindo segurança jurídica
-              para o proprietário.
-            </p>
-          </div>
-          <div class="why-cards">
-            <div class="why-card">
-              <div class="why-icon purple">&#x1F3AF;</div>
-              <div>
-                <h4>Precisão nos dados</h4>
-                <p>Equipamentos GNSS e processamento rigoroso</p>
-              </div>
-            </div>
-            <div class="why-card">
-              <div class="why-icon green">&#x1F6E1;&#xFE0F;</div>
-              <div>
-                <h4>Responsabilidade técnica</h4>
-                <p>ART assinada e respaldo legal completo</p>
-              </div>
-            </div>
-            <div class="why-card">
-              <div class="why-icon orange">&#x1F4AC;</div>
-              <div>
-                <h4>Comunicação direta</h4>
-                <p>Você fala direto com quem executa o serviço</p>
-              </div>
-            </div>
-            <div class="why-card">
-              <div class="why-icon blue">&#x1F4CD;</div>
-              <div>
-                <h4>Base na região</h4>
-                <p>Conhecemos a Serra Gaúcha e os órgãos locais</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== FAQ ===== -->
-    <section class="section" id="faq">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> FAQ</div>
-          <h2 class="section-title">Dúvidas frequentes</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-              Quanto custa um serviço de topografia ou georreferenciamento?
-              <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                O valor depende da área, acesso, tipo de imóvel, documentação disponível, urgência e tipo de entrega. A proposta é feita sob medida após entendermos sua demanda. Entre em contato e envie os detalhes para receber um orçamento personalizado.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-              Em quanto tempo fica pronto?
-              <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Varia conforme a demanda, agenda de campo e necessidade de processamento. A proposta já sai com prazo estimado para que você tenha clareza desde o início.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-              Vocês atendem rural e urbano?
-              <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Sim. Atendemos áreas rurais, urbanas, loteamentos, conferência de lotes, levantamento topográfico e georreferenciamento. A proposta é adaptada conforme o tipo de imóvel e a necessidade.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-              Vocês atendem só Veranópolis?
-              <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Não. Nossa base é em Veranópolis, mas atendemos também Vila Flores, Nova Bassano, outras cidades da Serra Gaúcha e demandas em RS, SC, PR e SP.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section" id="contato">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-label"><span class="section-label-dot"></span> Contato</div>
-          <h2 class="section-title">Fale com a NATIVE</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-left">
-            <p>
-              Chama no WhatsApp e manda a cidade, o tipo de serviço e uma noção da área ou do objetivo da demanda.
-              Respondemos rápido e com clareza.
-            </p>
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">&#x1F4E7;</div>
-                <div>
-                  <strong>E-mail</strong>
-                  <span>contato@nativeterritorial.com.br</span>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">&#x1F4CD;</div>
-                <div>
-                  <strong>Base</strong>
-                  <span>Veranópolis - RS &bull; Atendimento: RS, SC, PR e SP</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-cta">
-            <h3>&#x1F4AC; Solicitar orçamento</h3>
-            <p>Envie sua demanda pelo WhatsApp e receba uma proposta personalizada com prazo e escopo definidos.</p>
-            <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn-whatsapp" target="_blank" rel="noopener">
-              &#x1F4AC; Falar no WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA FINAL ===== -->
-    <section class="cta-section">
-      <div class="wrap">
-        <div class="cta-box">
-          <h2>Precisa de topografia ou georreferenciamento?</h2>
-          <p>Entre em contato com a NATIVE e tenha precisão, clareza e organização no seu projeto.</p>
-          <a href="https://wa.me/5554997104400?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn-white" target="_blank" rel="noopener">
-            &#x1F4AC; Solicitar orçamento pelo WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SERVICES FOOTER ===== -->
-    <section class="services-footer">
-      <div class="wrap">
-        <h3>Serviços</h3>
-        <div class="sf-grid">
-          <a href="topografia-veranopolis.html" class="sf-link">
-            Topografia em Veranópolis <span class="arrow">&rarr;</span>
-          </a>
-          <a href="licenciamento-ambiental-veranopolis.html" class="sf-link">
-            Licenciamento Ambiental em Veranópolis <span class="arrow">&rarr;</span>
-          </a>
-          <a href="georreferenciamento-veranopolis.html" class="sf-link">
-            Georreferenciamento em Veranópolis <span class="arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      &copy; 2026 NATIVE Inteligência Territorial e Ambiental &bull; Todos os direitos reservados
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section section--dark" id="diferenciais">
+  <div class="container">
+    <span class="label label--light">Diferenciais</span>
+    <h2 style="color:#fff;">Por que contratar a NATIVE?</h2>
+    <p style="color:rgba(255,255,255,0.7); max-width:620px;">Um serviço de topografia bem executado reduz risco, evita divergência de área e dá mais segurança para compra, venda, regularização e obras.</p>
+    <div class="diferenciais__grid">
+      <div class="diferencial">
+        <div class="diferencial__icon">🎯</div>
+        <h4>Precisão nos dados</h4>
+        <p>Equipamentos GNSS e processamento rigoroso em campo e escritório.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icon">🛡️</div>
+        <h4>Responsabilidade técnica</h4>
+        <p>ART assinada e respaldo legal completo em todos os serviços.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icon">💬</div>
+        <h4>Comunicação direta</h4>
+        <p>Você fala direto com quem executa o serviço, sem intermediários.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icon">📍</div>
+        <h4>Base na região</h4>
+        <p>Conhecemos a Serra Gaúcha, os cartórios e os órgãos locais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <span class="label">O que dizem nossos clientes</span>
+    <h2>Resultados reais de quem já contratou</h2>
+    <p>Proprietários rurais, advogados e empresas que resolveram sua situação fundiária com a NATIVE.</p>
+    <div class="depoimentos__grid">
+
+      <div class="depoimento">
+        <div class="depoimento__stars">★★★★★</div>
+        <p class="depoimento__texto">
+          "Precisava regularizar uma propriedade rural há anos parada no INCRA. A NATIVE resolveu tudo — georreferenciamento, SIGEF e matrícula — com clareza e prazo cumprido. Recomendo sem hesitar."
+        </p>
+        <div class="depoimento__autor">
+          <div class="depoimento__avatar">JM</div>
+          <div>
+            <strong>João M.</strong>
+            <span>Proprietário rural — Veranópolis/RS</span>
+            <span class="depoimento__badge">Georreferenciamento</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento">
+        <div class="depoimento__stars">★★★★★</div>
+        <p class="depoimento__texto">
+          "Contratei para levantamento topográfico de um terreno antes da compra. O laudo foi detalhado, entregue dentro do prazo e com toda a documentação em ordem. Profissional e eficiente."
+        </p>
+        <div class="depoimento__autor">
+          <div class="depoimento__avatar">AR</div>
+          <div>
+            <strong>Ana R.</strong>
+            <span>Investidora — Serra Gaúcha/RS</span>
+            <span class="depoimento__badge">Levantamento Topográfico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento">
+        <div class="depoimento__stars">★★★★★</div>
+        <p class="depoimento__texto">
+          "Como advogada, preciso de laudos técnicos confiáveis para processos de inventário e divisão de área. A NATIVE entrega documentação impecável, com ART e memorial descritivo completo."
+        </p>
+        <div class="depoimento__autor">
+          <div class="depoimento__avatar">CS</div>
+          <div>
+            <strong>Camila S.</strong>
+            <span>Advogada — Caxias do Sul/RS</span>
+            <span class="depoimento__badge">Laudo Técnico</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- INSTRUÇÃO: Substitua por depoimentos reais de clientes quando disponível. -->
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <span class="label">Dúvidas frequentes</span>
+    <h2 style="text-align:center;">Perguntas sobre topografia e georreferenciamento</h2>
+    <div class="faq__lista">
+
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">
+          Quanto custa um serviço de topografia ou georreferenciamento?
+          <span class="faq__seta">+</span>
+        </button>
+        <div class="faq__resposta">
+          <p>O valor depende da área, acesso, tipo de imóvel, documentação disponível, urgência e tipo de entrega. A proposta é feita sob medida após entendermos sua demanda.</p>
+          <div class="faq__preco">
+            <strong>💡 Referência de valores:</strong>
+            <p><strong>Levantamento topográfico urbano</strong> (lote padrão): a partir de R$ 800<br>
+            <strong>Georreferenciamento rural</strong> (pequenas propriedades até 5 ha): a partir de R$ 2.500<br>
+            <strong>Áreas maiores ou com complexidade</strong>: orçamento sob consulta</p>
+            <p style="margin-top:10px; font-size:0.88rem; color:#666;">Esses valores são apenas uma referência inicial. Entre em contato com sua cidade, tipo de imóvel e tamanho aproximado para receber uma proposta personalizada.</p>
+          </div>
+          <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" target="_blank" rel="noopener" class="btn btn--green btn--sm" style="margin-top:16px; display:inline-flex;">💬 Solicitar orçamento personalizado</a>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">
+          Em quanto tempo fica pronto?
+          <span class="faq__seta">+</span>
+        </button>
+        <div class="faq__resposta">
+          <p>Varia conforme a demanda, agenda de campo e necessidade de processamento. A proposta já sai com prazo estimado para que você tenha clareza desde o início. Georreferenciamentos simples costumam ser entregues em 15 a 30 dias após a execução de campo.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">
+          Vocês atendem rural e urbano?
+          <span class="faq__seta">+</span>
+        </button>
+        <div class="faq__resposta">
+          <p>Sim. Atendemos áreas rurais, urbanas, loteamentos, conferência de lotes, levantamento topográfico e georreferenciamento. A proposta é adaptada conforme o tipo de imóvel e a necessidade.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">
+          Vocês atendem só Veranópolis?
+          <span class="faq__seta">+</span>
+        </button>
+        <div class="faq__resposta">
+          <p>Não. Nossa base é em Veranópolis, mas atendemos também Vila Flores, Nova Bassano, Cotiporã, Fagundes Varela, Nova Prata e outras cidades da Serra Gaúcha, além de demandas em RS, SC, PR e SP.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">
+          O que é georreferenciamento e quando é obrigatório?
+          <span class="faq__seta">+</span>
+        </button>
+        <div class="faq__resposta">
+          <p>Georreferenciamento é o processo de determinar os limites de um imóvel rural com coordenadas geográficas precisas, conforme exigências do INCRA. É obrigatório para qualquer transação (venda, inventário, divisão, desmembramento) de imóveis rurais, independente do tamanho. Sem ele, o cartório não registra.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="contato__inner">
+      <div>
+        <span class="label label--light">Contato</span>
+        <h2>Fale com a NATIVE</h2>
+        <p class="contato__desc">Chama no WhatsApp e manda a cidade, o tipo de serviço e uma noção da área ou do objetivo da demanda. Respondemos rápido e com clareza.</p>
+        <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn--green" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+        <div class="contato__items">
+          <div class="contato__item">
+            <span>📧</span>
+            <div><strong>E-mail</strong>contato@nativeterritorial.com.br</div>
+          </div>
+          <div class="contato__item">
+            <span>📍</span>
+            <div><strong>Base</strong>Veranópolis — RS • Atendimento: RS, SC, PR e SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="contato__box">
+        <span class="label label--light">Solicitar orçamento</span>
+        <p>Envie sua demanda pelo WhatsApp com cidade, tipo de serviço e tamanho aproximado da área. Receba uma proposta personalizada com prazo e escopo definidos.</p>
+        <a href="https://wa.me/5554997104400?text=Olá!%20Quero%20orçamento%20para%20Topografia/Georreferenciamento/Ambiental.%20Cidade:%20____%20%7C%20Demanda:%20____" class="btn btn--green" target="_blank" rel="noopener" style="width:100%; justify-content:center;">💬 Enviar demanda pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© 2026 NATIVE Inteligência Territorial e Ambiental • Todos os direitos reservados</span>
+    <div class="footer__links">
+      <a href="https://nativeterritorial.com.br/topografia-veranopolis.html">Topografia em Veranópolis</a>
+      <a href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html">Georreferenciamento em Veranópolis</a>
+      <a href="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html">Licenciamento Ambiental</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const aberto = item.classList.contains('aberto');
+  document.querySelectorAll('.faq__item.aberto').forEach(i => i.classList.remove('aberto'));
+  if (!aberto) item.classList.add('aberto');
+}
+</script>
 
 </body>
 </html>
