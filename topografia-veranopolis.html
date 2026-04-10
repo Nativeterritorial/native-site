@@ -8,7 +8,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://nativeterritorial.com.br/topografia-veranopolis.html" />
 
-  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18051450854"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +16,6 @@
     gtag('config', 'AW-18051450854');
   </script>
 
-  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1481999170005922');
@@ -44,7 +42,7 @@
       --verde:       #4CAF6E;
       --verde-h:     #3D9B5E;
       --verde-light: rgba(76,175,110,0.12);
-      --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px;
+      --radius-md: 10px;
       --sans: 'DM Sans', sans-serif;
       --serif: 'DM Serif Display', serif;
     }
@@ -56,18 +54,16 @@
     .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--verde); color: #fff; font-family: var(--sans);
-      font-size: 15px; font-weight: 600; padding: 13px 26px;
-      border-radius: var(--radius-md); border: none; cursor: pointer;
-      transition: background 0.2s, transform 0.15s; white-space: nowrap;
+      background: var(--verde); color: #fff; font-size: 15px; font-weight: 600;
+      padding: 13px 26px; border-radius: var(--radius-md); border: none;
+      cursor: pointer; transition: background .2s, transform .15s; white-space: nowrap;
     }
     .btn-primary:hover { background: var(--verde-h); transform: translateY(-1px); }
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--off-white-d); font-family: var(--sans);
-      font-size: 14px; font-weight: 500; padding: 10px 20px;
-      border-radius: var(--radius-md); border: 1px solid var(--grafite-400);
-      cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+      background: transparent; color: var(--off-white-d); font-size: 14px; font-weight: 500;
+      padding: 10px 20px; border-radius: var(--radius-md); border: 1px solid var(--grafite-400);
+      cursor: pointer; transition: border-color .2s, color .2s; white-space: nowrap;
     }
     .btn-ghost:hover { border-color: var(--verde); color: var(--verde); }
 
@@ -77,41 +73,41 @@
     .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
     .logo-accent { color: var(--verde); }
     nav ul { display: flex; list-style: none; gap: 24px; }
-    nav ul a { font-size: 14px; font-weight: 500; color: var(--grafite-200); transition: color 0.2s; }
+    nav ul a { font-size: 14px; font-weight: 500; color: var(--grafite-200); transition: color .2s; }
     nav ul a:hover { color: var(--verde); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--off-white); border-radius: 2px; }
     .mobile-menu { display: none; flex-direction: column; background: var(--grafite-900); border-top: 1px solid var(--grafite-500); }
-    .mobile-menu a { display: block; padding: 14px 24px; font-size: 15px; font-weight: 500; color: var(--grafite-200); border-bottom: 1px solid var(--grafite-600); transition: color 0.2s; }
+    .mobile-menu a { display: block; padding: 14px 24px; font-size: 15px; font-weight: 500; color: var(--grafite-200); border-bottom: 1px solid var(--grafite-600); transition: color .2s; }
     .mobile-menu a:hover { color: var(--verde); }
     .mobile-menu.open { display: flex; }
     @media (max-width: 768px) { nav ul, .nav-cta { display: none; } .hamburger { display: flex; } }
 
     .lp-hero { background: var(--grafite-900); border-bottom: 1px solid var(--grafite-500); padding: 72px 0 64px; }
-    .lp-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--grafite-300); margin-bottom: 20px; }
+    .lp-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--grafite-300); margin-bottom: 20px; flex-wrap: wrap; }
     .lp-breadcrumb a { color: var(--verde); }
     .lp-breadcrumb span { color: var(--grafite-500); }
     .lp-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      background: var(--verde-light); border: 1px solid rgba(76,175,110,0.3);
+      background: var(--verde-light); border: 1px solid rgba(76,175,110,.3);
       color: var(--verde); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
+      letter-spacing: .08em; text-transform: uppercase;
       padding: 4px 12px; border-radius: 999px; margin-bottom: 20px;
     }
     .lp-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.15; color: var(--off-white); margin-bottom: 18px; max-width: 700px; }
     .lp-hero h1 em { font-style: italic; color: var(--verde); }
-    .lp-hero p { font-size: 17px; color: var(--grafite-200); line-height: 1.7; max-width: 600px; margin-bottom: 32px; }
+    .lp-hero p { font-size: 17px; color: var(--grafite-200); line-height: 1.7; max-width: 640px; margin-bottom: 32px; }
     .lp-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
     .trust-bar { background: var(--grafite-700); border-bottom: 1px solid var(--grafite-500); padding: 20px 0; }
     .trust-inner { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-    .trust-item strong { display: block; font-size: 13px; font-weight: 700; color: var(--verde); text-transform: uppercase; letter-spacing: 0.06em; }
+    .trust-item strong { display: block; font-size: 13px; font-weight: 700; color: var(--verde); text-transform: uppercase; letter-spacing: .06em; }
     .trust-item span { font-size: 13px; color: var(--grafite-200); }
 
     section { padding: 72px 0; }
-    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--verde); margin-bottom: 10px; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--verde); margin-bottom: 10px; }
     .section-title { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 400; color: var(--off-white); line-height: 1.2; margin-bottom: 14px; }
-    .section-sub { font-size: 16px; color: var(--grafite-200); line-height: 1.7; }
+    .section-sub { font-size: 16px; color: var(--grafite-200); line-height: 1.7; max-width: 760px; }
 
     .uses-section { background: var(--grafite-700); }
     .uses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
@@ -134,20 +130,24 @@
     .diff-item p { font-size: 14px; color: var(--grafite-200); line-height: 1.6; }
 
     .cta-section { background: var(--grafite-900); border-top: 1px solid var(--grafite-500); text-align: center; padding: 80px 0; }
-    .cta-section p { font-size: 16px; color: var(--grafite-200); max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
+    .cta-section p { font-size: 16px; color: var(--grafite-200); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
     .cta-meta { margin-top: 24px; font-size: 14px; color: var(--grafite-300); }
 
     footer { background: var(--grafite-900); border-top: 1px solid var(--grafite-600); padding: 36px 0 24px; }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { font-size: 14px; color: var(--grafite-300); transition: color 0.2s; }
+    .footer-links a { font-size: 14px; color: var(--grafite-300); transition: color .2s; }
     .footer-links a:hover { color: var(--verde); }
     .footer-bottom { padding-top: 16px; border-top: 1px solid var(--grafite-600); font-size: 13px; color: var(--grafite-300); text-align: center; }
     .footer-brand p { font-size: 13px; color: var(--grafite-300); }
+
+    @media (max-width: 768px) {
+      .trust-inner { gap: 20px; }
+      .lp-hero p { font-size: 16px; }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <div class="container nav-inner">
       <a href="https://nativeterritorial.com.br/" class="nav-logo">
@@ -187,7 +187,7 @@
       </div>
       <div class="lp-badge">Topografia • Veranópolis e região</div>
       <h1>Levantamento Topográfico em Veranópolis<br>com <em>precisão técnica</em> e prazo definido</h1>
-      <p>A NATIVE executa levantamento topográfico, planialtimétrico, plantas e mapas para terrenos urbanos, imóveis rurais, obras e implantação de projetos — com equipamentos GNSS e ART em todos os serviços.</p>
+      <p>A NATIVE executa levantamento topográfico, planialtimétrico, plantas e mapas para terrenos urbanos, imóveis rurais, obras e implantação de projetos — com equipamentos GNSS, responsabilidade técnica e atendimento direto com o profissional.</p>
       <div class="lp-hero-actions">
         <a href="https://wa.me/5554997104400?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20de%20topografia." class="btn-primary" target="_blank" rel="noopener">💬 Solicitar orçamento</a>
         <a href="https://nativeterritorial.com.br/" class="btn-ghost">← Voltar ao site</a>
@@ -201,4 +201,126 @@
         <div class="trust-item"><strong>GNSS</strong><span>Equipamentos de precisão</span></div>
         <div class="trust-item"><strong>ART</strong><span>Responsabilidade técnica</span></div>
         <div class="trust-item"><strong>Plantas</strong><span>e mapas georreferenciados</span></div>
-        <div class="trust-item"><strong>Di
+        <div class="trust-item"><strong>Direto</strong><span>com o profissional</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="uses-section" aria-labelledby="uses-title">
+    <div class="container">
+      <div class="section-label">Quando esse serviço é necessário</div>
+      <h2 class="section-title" id="uses-title">Aplicações da topografia em Veranópolis</h2>
+      <p class="section-sub">A topografia é a base para decisões seguras em obras, regularizações e divisão de áreas. Com um levantamento correto, você reduz retrabalho, evita erros de implantação e ganha clareza real sobre o imóvel.</p>
+
+      <div class="uses-grid">
+        <div class="use-card">
+          <h3>Terrenos urbanos</h3>
+          <p>Levantamento para compra, venda, conferência de medidas, implantação de obras e organização técnica do lote.</p>
+        </div>
+        <div class="use-card">
+          <h3>Imóveis rurais</h3>
+          <p>Mapeamento do terreno, leitura de relevo, divisas aparentes e apoio técnico para projetos no meio rural.</p>
+        </div>
+        <div class="use-card">
+          <h3>Projetos e obras</h3>
+          <p>Base topográfica para arquitetos, engenheiros, loteamentos, acessos, terraplenagem e execução com menos margem de erro.</p>
+        </div>
+        <div class="use-card">
+          <h3>Plantas e mapas</h3>
+          <p>Entrega organizada de peças técnicas para análise, protocolo, conferência interna e tomada de decisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-label">Como a NATIVE trabalha</div>
+      <h2 class="section-title" id="process-title">Etapas do levantamento topográfico</h2>
+      <p class="section-sub">A condução do serviço é feita com clareza desde o primeiro contato, para que você saiba o que será executado, o que será entregue e qual é o objetivo técnico do levantamento.</p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h3>Entendimento da demanda</h3>
+          <p>Recebemos as informações do imóvel, objetivo do serviço e contexto do cliente para definir a melhor abordagem.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h3>Levantamento em campo</h3>
+          <p>Execução com equipamentos adequados, coleta dos pontos necessários e leitura técnica do terreno.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h3>Processamento dos dados</h3>
+          <p>Organização das informações levantadas para gerar planta, mapa e base confiável para uso técnico.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h3>Entrega e orientação</h3>
+          <p>Você recebe o material com explicação objetiva sobre o resultado e sobre como utilizar o levantamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diff-section" aria-labelledby="diff-title">
+    <div class="container">
+      <div class="section-label">Por que fazer com a NATIVE</div>
+      <h2 class="section-title" id="diff-title">Topografia com critério técnico e comunicação direta</h2>
+      <p class="section-sub">Não basta medir. O valor real do serviço está em interpretar corretamente o terreno, produzir material utilizável e conduzir o cliente com objetividade ao longo do processo.</p>
+
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-icon">📍</div>
+          <h4>Precisão no campo</h4>
+          <p>Uso de equipamentos adequados e metodologia de trabalho orientada pela finalidade real do serviço.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">📐</div>
+          <h4>Material técnico organizado</h4>
+          <p>Plantas, mapas e informações entregues com clareza para facilitar obra, projeto ou conferência do imóvel.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">🤝</div>
+          <h4>Atendimento sem enrolação</h4>
+          <p>Contato direto, alinhamento objetivo e resposta clara sobre o que faz sentido executar em cada caso.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">🧾</div>
+          <h4>Responsabilidade técnica</h4>
+          <p>Serviço com ART e cuidado profissional desde o levantamento até a entrega final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="section-label">Solicitar orçamento</div>
+      <h2 class="section-title">Precisa de topografia em Veranópolis?</h2>
+      <p>Fale com a NATIVE pelo WhatsApp e explique a sua necessidade. A partir disso, alinhamos o tipo de levantamento, a forma de execução e a melhor solução técnica para o seu caso.</p>
+      <a href="https://wa.me/5554997104400?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20de%20topografia." class="btn-primary" target="_blank" rel="noopener">💬 Pedir orçamento no WhatsApp</a>
+      <div class="cta-meta">Atendimento em Veranópolis e região • NATIVE Inteligência Territorial</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p>NATIVE Inteligência Territorial</p>
+          <p>Topografia • Georreferenciamento • Licenciamento</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://nativeterritorial.com.br/">Início</a>
+          <a href="https://nativeterritorial.com.br/topografia-veranopolis.html">Topografia</a>
+          <a href="https://nativeterritorial.com.br/georreferenciamento-veranopolis.html">Georreferenciamento</a>
+          <a href="https://nativeterritorial.com.br/licenciamento-ambiental-veranopolis.html">Licenciamento</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 NATIVE Inteligência Territorial • Veranópolis / RS</div>
+    </div>
+  </footer>
+</body>
+</html>
