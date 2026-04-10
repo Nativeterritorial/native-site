@@ -1,4 +1,4 @@
-<YPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── TOKENS ── */
     :root {
       --grafite-900: #141414;
       --grafite-800: #1E1E1E;
@@ -52,7 +51,6 @@
       --serif: 'DM Serif Display', serif;
     }
 
-    /* ── RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -65,12 +63,10 @@
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
 
-    /* ── UTILITÁRIOS ── */
     .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
     .accent { color: var(--verde); }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-    /* ── BOTÕES ── */
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -107,7 +103,6 @@
     }
     .btn-ghost:hover { border-color: var(--verde); color: var(--verde); }
 
-    /* ── HEADER / NAV ── */
     header {
       position: sticky;
       top: 0;
@@ -190,7 +185,6 @@
       .hamburger { display: flex; }
     }
 
-    /* ── HERO ── */
     .hero {
       position: relative;
       min-height: 88vh;
@@ -284,7 +278,6 @@
       letter-spacing: 0.06em;
     }
 
-    /* ── SEÇÃO GENÉRICA ── */
     section { padding: 80px 0; }
     .section-label {
       font-size: 11px;
@@ -310,7 +303,6 @@
     }
     .section-header { margin-bottom: 48px; }
 
-    /* ── QUEM RESOLVE ── */
     .resolve-section { background: var(--grafite-700); }
     .resolve-grid {
       display: grid;
@@ -343,7 +335,6 @@
       line-height: 1.6;
     }
 
-    /* ── QUEM SOMOS ── */
     .about-section { background: var(--grafite-800); }
     .about-grid {
       display: grid;
@@ -385,7 +376,6 @@
       .about-image img { height: 240px; }
     }
 
-    /* ── SERVIÇOS ── */
     .services-section { background: var(--grafite-700); }
     .services-grid {
       display: grid;
@@ -444,7 +434,6 @@
     }
     .service-card:hover .service-link { gap: 8px; }
 
-    /* ── PROCESSO ── */
     .process-section { background: var(--grafite-800); }
     .process-steps {
       display: grid;
@@ -500,7 +489,6 @@
       .process-steps::before { display: none; }
     }
 
-    /* ── ÁREA DE ATENDIMENTO ── */
     .area-section { background: var(--grafite-700); }
     .area-grid {
       display: grid;
@@ -552,7 +540,6 @@
 
     @media (max-width: 768px) { .area-grid { grid-template-columns: 1fr; } }
 
-    /* ── LOCALIZAÇÃO ── */
     .location-section { background: var(--grafite-800); }
     .location-cards {
       display: grid;
@@ -590,8 +577,25 @@
       color: var(--grafite-200);
       margin-top: 4px;
     }
+    .location-map {
+      margin-top: 32px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--grafite-500);
+    }
+    .location-map iframe {
+      display: block;
+      width: 100%;
+      height: 360px;
+      border: 0;
+    }
+    .location-actions {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-    /* ── GALERIA ── */
     .gallery-section { background: var(--grafite-700); padding-bottom: 40px; }
     .gallery-grid {
       display: grid;
@@ -618,7 +622,6 @@
       .gallery-grid .g-main { grid-row: 1; grid-column: 1 / 3; }
     }
 
-    /* ── DIFERENCIAIS ── */
     .diff-section { background: var(--grafite-800); }
     .diff-grid {
       display: grid;
@@ -644,7 +647,6 @@
       line-height: 1.6;
     }
 
-    /* ── DEPOIMENTOS ── */
     .testimonials-section { background: var(--grafite-700); }
     .testimonials-grid {
       display: grid;
@@ -700,7 +702,6 @@
       color: var(--grafite-200);
     }
 
-    /* ── FAQ ── */
     .faq-section { background: var(--grafite-800); }
     .faq-list { display: flex; flex-direction: column; gap: 4px; }
     .faq-item {
@@ -761,7 +762,6 @@
     .faq-answer-inner strong { color: var(--off-white); }
     .faq-answer-inner a { color: var(--verde); text-decoration: underline; }
 
-    /* ── CTA FINAL ── */
     .cta-section {
       background: var(--grafite-900);
       border-top: 1px solid var(--grafite-500);
@@ -803,7 +803,6 @@
       color: var(--off-white);
     }
 
-    /* ── FOOTER ── */
     footer {
       background: var(--grafite-900);
       border-top: 1px solid var(--grafite-600);
@@ -850,7 +849,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="container nav-inner">
       <a href="#" class="nav-logo">
@@ -883,7 +881,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-bg">
       <img src="https://nativeterritorial.com.br/hero-campo.jpg" alt="" aria-hidden="true" />
@@ -925,7 +922,6 @@
     </div>
   </section>
 
-  <!-- QUEM RESOLVE -->
   <section class="resolve-section" aria-labelledby="resolve-title">
     <div class="container">
       <div class="section-label">O que você resolve com a NATIVE</div>
@@ -950,7 +946,6 @@
     </div>
   </section>
 
-  <!-- QUEM SOMOS -->
   <section class="about-section" aria-labelledby="about-title">
     <div class="container">
       <div class="about-grid">
@@ -969,7 +964,6 @@
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
   <section id="servicos" class="services-section" aria-labelledby="services-title">
     <div class="container">
       <div class="section-header">
@@ -1015,7 +1009,6 @@
     </div>
   </section>
 
-  <!-- PROCESSO -->
   <section id="como-funciona" class="process-section" aria-labelledby="process-title">
     <div class="container">
       <div class="section-header">
@@ -1048,7 +1041,6 @@
     </div>
   </section>
 
-  <!-- ÁREA DE ATENDIMENTO -->
   <section id="area" class="area-section" aria-labelledby="area-title">
     <div class="container">
       <div class="area-grid">
@@ -1082,12 +1074,12 @@
     </div>
   </section>
 
-  <!-- LOCALIZAÇÃO -->
   <section class="location-section" aria-labelledby="location-title">
     <div class="container">
       <div class="section-label">Localização</div>
       <h2 class="section-title" id="location-title">Base em Veranópolis, RS</h2>
       <p class="section-sub">Atendemos com agilidade toda a Serra Gaúcha e região, com deslocamento rápido para os municípios vizinhos.</p>
+
       <div class="location-cards">
         <div class="location-card">
           <div class="location-card-icon">📍</div>
@@ -1104,14 +1096,27 @@
         <div class="location-card">
           <div class="location-card-icon">📧</div>
           <h4>E-mail</h4>
-          <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f1c10110b1e0b103f111e0b16091a0b1a0d0d160b100d161e13511c1012511d0d">[email&#160;protected]</a></p>
+          <p><a href="mailto:contato@nativeterritorial.com.br">contato@nativeterritorial.com.br</a></p>
           <small>Atendimento também em RS, SC, PR e SP</small>
         </div>
+      </div>
+
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps?q=Rua+Dr.+José+Montaury,+595,+Veranópolis,+RS&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa da NATIVE em Veranópolis">
+        </iframe>
+      </div>
+
+      <div class="location-actions">
+        <a href="https://maps.google.com/?q=Rua+Dr.+José+Montaury,+595,+Veranópolis,+RS" class="btn-ghost" target="_blank" rel="noopener">📍 Abrir no Google Maps</a>
       </div>
     </div>
   </section>
 
-  <!-- GALERIA -->
   <section class="gallery-section" aria-label="Trabalhos em campo">
     <div class="container">
       <div class="section-label">Trabalhos em campo</div>
@@ -1126,7 +1131,6 @@
     </div>
   </section>
 
-  <!-- DIFERENCIAIS -->
   <section class="diff-section" aria-labelledby="diff-title">
     <div class="container">
       <div class="section-header">
@@ -1159,7 +1163,6 @@
     </div>
   </section>
 
-  <!-- DEPOIMENTOS -->
   <section class="testimonials-section" aria-labelledby="testimonials-title">
     <div class="container">
       <div class="section-header">
@@ -1204,7 +1207,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="faq-section" aria-labelledby="faq-title">
     <div class="container">
       <div class="section-header">
@@ -1276,7 +1278,6 @@
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section id="contato" class="cta-section" aria-labelledby="cta-title">
     <div class="container">
       <div class="section-label">Contato</div>
@@ -1290,7 +1291,7 @@
           <span class="cta-info-icon">📧</span>
           <div>
             <strong>E-mail</strong>
-            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="55363a3b2134213a153b34213c2330213027273c213a273c34397b363a387b3727">[email&#160;protected]</a></p>
+            <p><a href="mailto:contato@nativeterritorial.com.br">contato@nativeterritorial.com.br</a></p>
           </div>
         </div>
         <div class="cta-info-item">
@@ -1304,7 +1305,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1327,7 +1327,7 @@
           <h5>Contato</h5>
           <ul>
             <li><a href="https://wa.me/5554997104400">WhatsApp</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#f1929e9f8590859eb19f90859887948594838398859e8398909ddf929e9cdf9383">E-mail</a></li>
+            <li><a href="mailto:contato@nativeterritorial.com.br">E-mail</a></li>
           </ul>
         </div>
       </div>
@@ -1337,10 +1337,24 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
+  <script>
+    document.querySelectorAll('.faq-question').forEach((btn) => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
         const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item'!DOCT
+
+        document.querySelectorAll('.faq-item').forEach((faq) => {
+          faq.classList.remove('open');
+          const question = faq.querySelector('.faq-question');
+          if (question) question.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
