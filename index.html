@@ -845,6 +845,38 @@
       color: var(--grafite-300);
       text-align: center;
     }
+
+    /* ── Banner de Cookies ── */
+    #native-cookie-banner {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background: #222222;
+      border: 0.5px solid #3a3a3a;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      max-width: 520px;
+      width: calc(100% - 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      animation: nc-slide-up 0.3s ease;
+    }
+    @keyframes nc-slide-up {
+      from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    #native-cookie-banner .nc-header { display: flex; align-items: flex-start; gap: 10px; }
+    #native-cookie-banner .nc-dot { width: 6px; height: 6px; background: #4caf6e; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+    #native-cookie-banner .nc-title { font-size: 13px; font-weight: 600; color: #f0ede6; margin: 0 0 4px; }
+    #native-cookie-banner .nc-text { font-size: 12px; color: #888888; margin: 0; line-height: 1.6; }
+    #native-cookie-banner .nc-text a { color: #4caf6e; text-decoration: none; }
+    #native-cookie-banner .nc-actions { display: flex; gap: 8px; justify-content: flex-end; }
+    #native-cookie-banner .nc-btn-recusar { font-size: 12px; padding: 6px 14px; background: transparent; border: 0.5px solid #444; border-radius: 8px; color: #888; cursor: pointer; }
+    #native-cookie-banner .nc-btn-aceitar { font-size: 12px; padding: 6px 16px; background: #4caf6e; border: none; border-radius: 8px; color: #111; font-weight: 600; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -1337,24 +1369,59 @@
     </div>
   </footer>
 
+  <!-- Banner de Cookies -->
+  <div id="native-cookie-banner" role="dialog" aria-label="Aviso de cookies" style="display:none;">
+    <div class="nc-header">
+      <div class="nc-dot"></div>
+      <div>
+        <p class="nc-title">Privacidade e cookies</p>
+        <p class="nc-text">
+          Utilizamos cookies para melhorar sua experiência e mensurar o desempenho do site.
+          Ao continuar, você concorda com nossa
+          <a href="/politica-de-privacidade.html" target="_blank">Política de Privacidade</a>.
+        </p>
+      </div>
+    </div>
+    <div class="nc-actions">
+      <button class="nc-btn-recusar" onclick="nativeCookieRecusar()">Recusar</button>
+      <button class="nc-btn-aceitar" onclick="nativeCookieAceitar()">Aceitar</button>
+    </div>
+  </div>
+
   <script>
     document.querySelectorAll('.faq-question').forEach((btn) => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
         const isOpen = item.classList.contains('open');
-
         document.querySelectorAll('.faq-item').forEach((faq) => {
           faq.classList.remove('open');
           const question = faq.querySelector('.faq-question');
           if (question) question.setAttribute('aria-expanded', 'false');
         });
-
         if (!isOpen) {
           item.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
+
+    // Cookies
+    (function() {
+      var CHAVE = 'native_cookie_consent';
+      var banner = document.getElementById('native-cookie-banner');
+      if (!localStorage.getItem(CHAVE)) {
+        banner.style.display = 'flex';
+      }
+      window.nativeCookieAceitar = function() {
+        localStorage.setItem(CHAVE, 'accepted');
+        banner.style.display = 'none';
+      };
+      window.nativeCookieRecusar = function() {
+        localStorage.setItem(CHAVE, 'declined');
+        banner.style.display = 'none';
+      };
+    })();
   </script>
+
 </body>
 </html>
